@@ -10,14 +10,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    // MARK: - Properties
+    // MARK: - Public Properties
     var window: UIWindow?
+    
+    // MARK: - Private Properties
+    private lazy var appCoordinator = AppCoordinator()
     
     // MARK: - Methods
     func application(_ application: UIApplication,didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+        window = appCoordinator.window
         return true
     }
 }
