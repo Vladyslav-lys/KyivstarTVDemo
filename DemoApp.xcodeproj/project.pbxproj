@@ -10,6 +10,7 @@
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		27A0C6442C7DDAFB009242D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 27A0C6432C7DDAFB009242D7 /* Alamofire */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A0C6442C7DDAFB009242D7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +84,13 @@
 				27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		27A0C6422C7DDAFB009242D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
@@ -140,6 +149,7 @@
 				AB5E773F261461B7004AA3B2 /* DemoApp */,
 				27A0C6362C7DCF7F009242D7 /* NetworkLayer */,
 				AB5E773E261461B7004AA3B2 /* Products */,
+				27A0C6422C7DDAFB009242D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +203,9 @@
 			dependencies = (
 			);
 			name = NetworkLayer;
+			packageProductDependencies = (
+				27A0C6432C7DDAFB009242D7 /* Alamofire */,
+			);
 			productName = NetworkLayer;
 			productReference = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */;
 			productType = "com.apple.product-type.framework";
@@ -212,6 +225,8 @@
 				27A0C63A2C7DCF7F009242D7 /* PBXTargetDependency */,
 			);
 			name = DemoApp;
+			packageProductDependencies = (
+			);
 			productName = DemoApp;
 			productReference = AB5E773D261461B7004AA3B2 /* DemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -595,6 +610,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27A0C6432C7DDAFB009242D7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27A0C6412C7DD78A009242D7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB5E7735261461B7004AA3B2 /* Project object */;
 }
