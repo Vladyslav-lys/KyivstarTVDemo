@@ -10,11 +10,9 @@ import Alamofire
 // MARK: - Response
 extension Network {
     public class Response {
-        // MARK: - Public Properties
+        // MARK: - Properties
         public let response: HTTPURLResponse
         public let request: URLRequest?
-        
-        // MARK: - Internal Properties
         let data: Data
         let metrics: URLSessionTaskMetrics?
 
