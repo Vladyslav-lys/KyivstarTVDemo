@@ -120,7 +120,9 @@ final public class Network {
     }
 
     private func makeURLRequest(for target: RequestConvertible) throws -> URLRequest {
-        let url = try makeBaseURL(for: target).appendingPathComponent(target.path)
+        let url = try makeBaseURL(for: target)
+            .appendingPathComponent(target.path)
+            .appendingPathComponent(target.suffix)
         var request = try URLRequest(url: url).encoded(for: target)
         request.httpMethod = target.method.rawValue
         target.headers?.dictionary.forEach { request.setValue($1, forHTTPHeaderField: $0) }

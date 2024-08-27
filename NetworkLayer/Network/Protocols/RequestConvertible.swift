@@ -22,6 +22,9 @@ public protocol RequestConvertible {
 
     /// The headers to be used in the request.
     var headers: Network.Headers? { get }
+    
+    /// The last part of the `baseURL` path
+    var suffix: String { get }
 
     /// Specify authorization strategy for request.
     var authorizationStrategy: AuthorizationStrategy? { get }
@@ -33,4 +36,6 @@ extension RequestConvertible {
     public var headers: Network.Headers? { nil }
 
     public var authorizationStrategy: AuthorizationStrategy? { .token }
+    
+    public var suffix: String { "" }
 }
