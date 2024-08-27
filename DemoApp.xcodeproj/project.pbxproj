@@ -43,6 +43,8 @@
 		27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6A92C7E57EA009242D7 /* ReleaseDateCoder.swift */; };
 		27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6AD2C7E584A009242D7 /* Promotion.swift */; };
 		27A0C6B02C7E58BF009242D7 /* Promotion+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6AF2C7E58BF009242D7 /* Promotion+Response.swift */; };
+		27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6B22C7E5A7D009242D7 /* PromotionGroup.swift */; };
+		27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6B42C7E5B35009242D7 /* PromotionGroup+Response.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -111,6 +113,8 @@
 		27A0C6A92C7E57EA009242D7 /* ReleaseDateCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseDateCoder.swift; sourceTree = "<group>"; };
 		27A0C6AD2C7E584A009242D7 /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 		27A0C6AF2C7E58BF009242D7 /* Promotion+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promotion+Response.swift"; sourceTree = "<group>"; };
+		27A0C6B22C7E5A7D009242D7 /* PromotionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionGroup.swift; sourceTree = "<group>"; };
+		27A0C6B42C7E5B35009242D7 /* PromotionGroup+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromotionGroup+Response.swift"; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -329,10 +333,20 @@
 		27A0C6AC2C7E583E009242D7 /* Promotion */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6B12C7E5A64009242D7 /* PromotionGroup */,
 				27A0C6AD2C7E584A009242D7 /* Promotion.swift */,
 				27A0C6AF2C7E58BF009242D7 /* Promotion+Response.swift */,
 			);
 			path = Promotion;
+			sourceTree = "<group>";
+		};
+		27A0C6B12C7E5A64009242D7 /* PromotionGroup */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6B22C7E5A7D009242D7 /* PromotionGroup.swift */,
+				27A0C6B42C7E5B35009242D7 /* PromotionGroup+Response.swift */,
+			);
+			path = PromotionGroup;
 			sourceTree = "<group>";
 		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
@@ -601,11 +615,13 @@
 				27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */,
 				27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */,
 				27A0C69D2C7E5398009242D7 /* DateFormatter+Extension.swift in Sources */,
+				27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */,
 				AB5E7745261461B7004AA3B2 /* ViewController.swift in Sources */,
 				27E18D122C7D03BF00341D44 /* Platform.swift in Sources */,
 				27A0C6A62C7E5779009242D7 /* DateCoder.swift in Sources */,
 				27A0C6A12C7E558C009242D7 /* TimeZone+Extension.swift in Sources */,
 				27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */,
+				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
 				27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */,
 				27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */,
 				AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */,
