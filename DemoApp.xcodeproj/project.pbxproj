@@ -41,6 +41,8 @@
 		27A0C6A62C7E5779009242D7 /* DateCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6A52C7E5779009242D7 /* DateCoder.swift */; };
 		27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6A72C7E57BA009242D7 /* ISODateCoder.swift */; };
 		27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6A92C7E57EA009242D7 /* ReleaseDateCoder.swift */; };
+		27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6AD2C7E584A009242D7 /* Promotion.swift */; };
+		27A0C6B02C7E58BF009242D7 /* Promotion+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6AF2C7E58BF009242D7 /* Promotion+Response.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -107,6 +109,8 @@
 		27A0C6A52C7E5779009242D7 /* DateCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCoder.swift; sourceTree = "<group>"; };
 		27A0C6A72C7E57BA009242D7 /* ISODateCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISODateCoder.swift; sourceTree = "<group>"; };
 		27A0C6A92C7E57EA009242D7 /* ReleaseDateCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseDateCoder.swift; sourceTree = "<group>"; };
+		27A0C6AD2C7E584A009242D7 /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
+		27A0C6AF2C7E58BF009242D7 /* Promotion+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promotion+Response.swift"; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -314,6 +318,23 @@
 			path = Coders;
 			sourceTree = "<group>";
 		};
+		27A0C6AB2C7E5836009242D7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6AC2C7E583E009242D7 /* Promotion */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		27A0C6AC2C7E583E009242D7 /* Promotion */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6AD2C7E584A009242D7 /* Promotion.swift */,
+				27A0C6AF2C7E58BF009242D7 /* Promotion+Response.swift */,
+			);
+			path = Promotion;
+			sourceTree = "<group>";
+		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +412,7 @@
 		AB5E773F261461B7004AA3B2 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6AB2C7E5836009242D7 /* Entities */,
 				27E18D132C7D052200341D44 /* Components */,
 				27E18D102C7D03AF00341D44 /* Services */,
 				27E18D0C2C7CEA2B00341D44 /* Modules */,
@@ -573,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A0C6B02C7E58BF009242D7 /* Promotion+Response.swift in Sources */,
 				27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */,
 				27A0C6A32C7E5643009242D7 /* Locale+Extension.swift in Sources */,
 				27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */,
@@ -584,6 +607,7 @@
 				27A0C6A12C7E558C009242D7 /* TimeZone+Extension.swift in Sources */,
 				27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */,
 				27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */,
+				27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */,
 				AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
