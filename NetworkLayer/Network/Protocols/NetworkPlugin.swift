@@ -10,11 +10,6 @@ import Foundation
 public protocol NetworkPlugin {
     func prepare(_ request: URLRequest, target: RequestConvertible) throws -> URLRequest
     func process(_ result: Network.ResponseResult, target: RequestConvertible) -> Network.ResponseResult
-    func should(
-        target: RequestConvertible,
-        dueTo error: Error,
-        completion: @escaping (Network.RetryResult) -> Void
-    )
 }
 
 extension NetworkPlugin {
@@ -24,13 +19,5 @@ extension NetworkPlugin {
 
     public func process(_ result: Network.ResponseResult, target: RequestConvertible) -> Network.ResponseResult {
         result
-    }
-
-    public func should(
-        target: RequestConvertible,
-        dueTo error: Error,
-        completion: @escaping (Network.RetryResult) -> Void
-    ) {
-        completion(.doNotRetry)
     }
 }

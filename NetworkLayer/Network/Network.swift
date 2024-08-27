@@ -10,7 +10,6 @@ import Alamofire
 final public class Network {
     // MARK: - Typealiases
     public typealias ResponseResult = Result<Response, Error>
-    public typealias RetryResult = Alamofire.RetryResult
     public typealias Request = Alamofire.Request
     public typealias Completion = (ResponseResult) -> Void
     public typealias Method = Alamofire.HTTPMethod
@@ -70,7 +69,7 @@ final public class Network {
         let commonCompletion: Completion = { [weak self] result in
             guard let self else { return }
             let result = self.process(result, target: target)
-            self.handleResult(result, target: target, queue: queue, token: token, completion: completion)
+            completion(result)
         }
 
         do {
@@ -128,22 +127,6 @@ final public class Network {
         target.headers?.dictionary.forEach { request.setValue($1, forHTTPHeaderField: $0) }
         return try prepare(request, target: target)
     }
-
-    private func handleResult(
-        _ result: ResponseResult,
-        target: RequestConvertible,
-        queue: DispatchQueue,
-        token: CancellableToken,
-        completion: @escaping Completion
-    ) {
-        guard case .failure(let error) = result else {
-            completion(result)
-            return
-        }
-        should(retry: target, dueTo: error, plugins: plugins) { _ in
-            completion(result)
-        }
-    }
     
     private func performError(_ error: Error?) -> NetworkError {
         isInternetAvailable ? NetworkError(error) : NetworkError.noInternetConnection
@@ -158,35 +141,5 @@ extension Network {
 
     private func process(_ result: Network.ResponseResult, target: RequestConvertible) -> Network.ResponseResult {
         plugins.reduce(result) { $1.process($0, target: target) }
-    }
-}
-
-// MARK: - Handle RequestRetrier methods
-extension Network {
-    private func should(
-        retry target: RequestConvertible,
-        dueTo error: Error,
-        plugins: [NetworkPlugin],
-        completion: @escaping (RetryResult) -> Void
-    ) {
-        guard let plugin = plugins.first else {
-            completion(.doNotRetry)
-            return
-        }
-       
-        plugin.should(target: target, dueTo: error) { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .doNotRetry:
-                self.should(
-                    retry: target,
-                    dueTo: error,
-                    plugins: Array(plugins.dropFirst()),
-                    completion: completion
-                )
-            default:
-                completion(result)
-            }
-        }
     }
 }
