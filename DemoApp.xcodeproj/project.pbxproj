@@ -46,6 +46,7 @@
 		27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6B22C7E5A7D009242D7 /* PromotionGroup.swift */; };
 		27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6B42C7E5B35009242D7 /* PromotionGroup+Response.swift */; };
 		27A0C6BB2C7E5C8F009242D7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6BA2C7E5C8F009242D7 /* AppError.swift */; };
+		27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6BD2C7E5DFE009242D7 /* AsyncTask.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -117,6 +118,7 @@
 		27A0C6B22C7E5A7D009242D7 /* PromotionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionGroup.swift; sourceTree = "<group>"; };
 		27A0C6B42C7E5B35009242D7 /* PromotionGroup+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromotionGroup+Response.swift"; sourceTree = "<group>"; };
 		27A0C6BA2C7E5C8F009242D7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		27A0C6BD2C7E5DFE009242D7 /* AsyncTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -359,6 +361,14 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		27A0C6BC2C7E5DF2009242D7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6BD2C7E5DFE009242D7 /* AsyncTask.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +407,7 @@
 		27E18D132C7D052200341D44 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6BC2C7E5DF2009242D7 /* Common */,
 				27A0C6B92C7E5C78009242D7 /* Errors */,
 				27A0C6A42C7E573A009242D7 /* Coders */,
 				27A0C69E2C7E54F7009242D7 /* Extensions */,
@@ -627,6 +638,7 @@
 				27A0C6BB2C7E5C8F009242D7 /* AppError.swift in Sources */,
 				27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */,
 				27A0C69D2C7E5398009242D7 /* DateFormatter+Extension.swift in Sources */,
+				27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */,
 				27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */,
 				AB5E7745261461B7004AA3B2 /* ViewController.swift in Sources */,
 				27E18D122C7D03BF00341D44 /* Platform.swift in Sources */,
