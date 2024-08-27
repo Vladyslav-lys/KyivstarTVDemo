@@ -14,7 +14,7 @@ extension API {
         case getContentGroups
         case getAssetDetails
         
-        var path: String {
+        public var path: String {
             switch self {
             case .getPromotions: "j_BRMrbcY-5W"
             case .getCategories: "eO-fawoGqaNB"
@@ -23,10 +23,10 @@ extension API {
             }
         }
         
-        var method: Network.Method { .get }
+        public var method: Network.Method { .get }
         
-        var task: Network.Task { .requestPlain }
+        public var task: Network.Task { .requestPlain }
         
-        var suffix: String { "/data" }
+        public var suffix: String { "/data" }
     }
 }
