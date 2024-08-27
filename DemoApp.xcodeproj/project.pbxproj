@@ -34,6 +34,7 @@
 		27A0C67F2C7E1B6A009242D7 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27A0C67E2C7E1B6A009242D7 /* Configuration.plist */; };
 		27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6822C7E1E44009242D7 /* Environment.generated.swift */; };
 		27A0C6852C7E22B0009242D7 /* APIErrorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6842C7E22B0009242D7 /* APIErrorPlugin.swift */; };
+		27A0C68B2C7E3E7B009242D7 /* API+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C68A2C7E3E7B009242D7 /* API+Assets.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -93,6 +94,7 @@
 		27A0C67E2C7E1B6A009242D7 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		27A0C6822C7E1E44009242D7 /* Environment.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.generated.swift; sourceTree = "<group>"; };
 		27A0C6842C7E22B0009242D7 /* APIErrorPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorPlugin.swift; sourceTree = "<group>"; };
+		27A0C68A2C7E3E7B009242D7 /* API+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Assets.swift"; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 		27A0C67A2C7E0CBD009242D7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6892C7E3E62009242D7 /* Assets */,
 				27A0C67B2C7E0CC7009242D7 /* API.swift */,
 			);
 			path = API;
@@ -246,6 +249,14 @@
 				27A0C6822C7E1E44009242D7 /* Environment.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		27A0C6892C7E3E62009242D7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C68A2C7E3E7B009242D7 /* API+Assets.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
@@ -476,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A0C66E2C7DE8A6009242D7 /* Cancellable.swift in Sources */,
+				27A0C68B2C7E3E7B009242D7 /* API+Assets.swift in Sources */,
 				27A0C6642C7DE615009242D7 /* Network+Headers.swift in Sources */,
 				27A0C64A2C7DDD79009242D7 /* Network.swift in Sources */,
 				27A0C64F2C7DE2CA009242D7 /* Network+Task.swift in Sources */,
