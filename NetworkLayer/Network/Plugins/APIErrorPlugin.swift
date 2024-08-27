@@ -11,7 +11,7 @@ public class APIErrorPlugin: NetworkPlugin {
     public func process(_ result: Network.ResponseResult,
                         target: RequestConvertible) -> Network.ResponseResult {
         guard case .success(let response) = result,
-              APIError.range ~= response.statusCode else {
+              APIError.codeRange ~= response.statusCode else {
             return result
         }
         

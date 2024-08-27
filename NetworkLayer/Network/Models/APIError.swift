@@ -9,7 +9,7 @@ import Alamofire
 
 // MARK: - APIError
 public struct APIError: Decodable, LocalizedError {
-    static let range = 400..<600
+    static let codeRange = 400..<600
     
     let error: String?
     let errors: [String]?
@@ -17,7 +17,7 @@ public struct APIError: Decodable, LocalizedError {
     public let httpCode: Int
     
     public var status: Status {
-        APIError.range ~= httpCode ? .serverError : .other
+        APIError.codeRange ~= httpCode ? .serverError : .other
     }
 }
 
