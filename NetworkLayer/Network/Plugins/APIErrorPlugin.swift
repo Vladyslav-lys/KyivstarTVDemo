@@ -8,6 +8,8 @@
 import Foundation
 
 public class APIErrorPlugin: NetworkPlugin {
+    public init() {}
+    
     public func process(_ result: Network.ResponseResult,
                         target: RequestConvertible) -> Network.ResponseResult {
         guard case .success(let response) = result,
