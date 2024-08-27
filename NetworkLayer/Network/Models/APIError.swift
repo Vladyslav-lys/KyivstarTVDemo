@@ -9,17 +9,15 @@ import Alamofire
 
 // MARK: - APIError
 public struct APIError: Decodable, LocalizedError {
+    static let range = 400..<600
+    
     let error: String?
     let errors: [String]?
     let message: String
     public let httpCode: Int
-
-    public var errorDescription: String? {
-        error == "invalid_grant" ? "Invalid credentials" : errors?.first ?? message
-    }
     
     public var status: Status {
-        400..<600 ~= httpCode ? .serverError : .other
+        APIError.range ~= httpCode ? .serverError : .other
     }
 }
 
