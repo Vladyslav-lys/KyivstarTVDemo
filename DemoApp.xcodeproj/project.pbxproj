@@ -31,6 +31,8 @@
 		27A0C6772C7DEB41009242D7 /* AuthorizationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6762C7DEB41009242D7 /* AuthorizationPlugin.swift */; };
 		27A0C6792C7DEC3D009242D7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6782C7DEC3D009242D7 /* Token.swift */; };
 		27A0C67C2C7E0CC7009242D7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C67B2C7E0CC7009242D7 /* API.swift */; };
+		27A0C67F2C7E1B6A009242D7 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27A0C67E2C7E1B6A009242D7 /* Configuration.plist */; };
+		27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6822C7E1E44009242D7 /* Environment.generated.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -87,6 +89,8 @@
 		27A0C6762C7DEB41009242D7 /* AuthorizationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPlugin.swift; sourceTree = "<group>"; };
 		27A0C6782C7DEC3D009242D7 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		27A0C67B2C7E0CC7009242D7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		27A0C67E2C7E1B6A009242D7 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		27A0C6822C7E1E44009242D7 /* Environment.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.generated.swift; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -225,9 +229,26 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		27A0C67D2C7E1B49009242D7 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C67E2C7E1B6A009242D7 /* Configuration.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		27A0C6802C7E1C17009242D7 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6822C7E1E44009242D7 /* Environment.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6802C7E1C17009242D7 /* Generated */,
 				AB5E7749261461B9004AA3B2 /* Assets.xcassets */,
 				AB5E774B261461B9004AA3B2 /* LaunchScreen.storyboard */,
 				AB5E774E261461B9004AA3B2 /* Info.plist */,
@@ -262,6 +283,7 @@
 		27E18D132C7D052200341D44 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C67D2C7E1B49009242D7 /* Configurations */,
 				27E18D142C7D052A00341D44 /* Protocols */,
 			);
 			path = Components;
@@ -350,6 +372,7 @@
 				AB5E773A261461B7004AA3B2 /* Frameworks */,
 				AB5E773B261461B7004AA3B2 /* Resources */,
 				27A0C63D2C7DCF7F009242D7 /* Embed Frameworks */,
+				27A0C6812C7E1C72009242D7 /* [CodeGen] Environment */,
 			);
 			buildRules = (
 			);
@@ -416,11 +439,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB5E774D261461B9004AA3B2 /* LaunchScreen.storyboard in Resources */,
+				27A0C67F2C7E1B6A009242D7 /* Configuration.plist in Resources */,
 				AB5E774A261461B9004AA3B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27A0C6812C7E1C72009242D7 /* [CodeGen] Environment */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CodeGen] Environment";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#Script debugging\nset -x\n\n# Get path to SwiftConfigurationGenerator script\nSWIFT_CONFIGURATION_GENERATOR_PATH=$PROJECT_DIR/SwiftConfigurationGenerator.swift\n\n# The input configuration file\nINPUT_PATH=$PROJECT_DIR/DemoApp/Components/Configurations/Configuration.plist\n\n# The generated file output path\nOUTPUT_PATH=$PROJECT_DIR/DemoApp/Resources/Generated/Environment.generated.swift\n\n# Add permission to generator for script execution\nchmod 755 $SWIFT_CONFIGURATION_GENERATOR_PATH\n\n# Execute the script\n$SWIFT_CONFIGURATION_GENERATOR_PATH $INPUT_PATH $OUTPUT_PATH\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27A0C6312C7DCF7F009242D7 /* Sources */ = {
@@ -456,6 +501,7 @@
 			files = (
 				27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */,
 				27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */,
+				27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */,
 				AB5E7745261461B7004AA3B2 /* ViewController.swift in Sources */,
 				27E18D122C7D03BF00341D44 /* Platform.swift in Sources */,
 				AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */,
