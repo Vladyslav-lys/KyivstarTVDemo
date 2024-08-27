@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -242,6 +242,9 @@
 				Base,
 			);
 			mainGroup = AB5E7734261461B7004AA3B2;
+			packageReferences = (
+				27A0C6412C7DD78A009242D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = AB5E773E261461B7004AA3B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -581,6 +584,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27A0C6412C7DD78A009242D7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = AB5E7735261461B7004AA3B2 /* Project object */;
 }
