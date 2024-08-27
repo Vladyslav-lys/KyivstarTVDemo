@@ -8,7 +8,7 @@
 import Foundation
 
 extension API {
-    enum Assets: RequestConvertible {
+    public enum Assets: RequestConvertible {
         case getPromotions
         case getCategories
         case getContentGroups
