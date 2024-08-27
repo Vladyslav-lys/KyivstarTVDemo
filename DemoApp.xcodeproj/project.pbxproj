@@ -47,6 +47,7 @@
 		27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6B42C7E5B35009242D7 /* PromotionGroup+Response.swift */; };
 		27A0C6BB2C7E5C8F009242D7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6BA2C7E5C8F009242D7 /* AppError.swift */; };
 		27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6BD2C7E5DFE009242D7 /* AsyncTask.swift */; };
+		27A0C6C02C7E6122009242D7 /* AnyPublisher+NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6BF2C7E6122009242D7 /* AnyPublisher+NetworkResponse.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -119,6 +120,7 @@
 		27A0C6B42C7E5B35009242D7 /* PromotionGroup+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromotionGroup+Response.swift"; sourceTree = "<group>"; };
 		27A0C6BA2C7E5C8F009242D7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		27A0C6BD2C7E5DFE009242D7 /* AsyncTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
+		27A0C6BF2C7E6122009242D7 /* AnyPublisher+NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+NetworkResponse.swift"; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				27A0C6632C7DE615009242D7 /* Network+Headers.swift */,
 				27A0C6672C7DE6AE009242D7 /* URLRequest+Encoding.swift */,
 				27A0C66B2C7DE84F009242D7 /* APIError+Status.swift */,
+				27A0C6BF2C7E6122009242D7 /* AnyPublisher+NetworkResponse.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				27A0C6512C7DE30E009242D7 /* Network+Combine.swift in Sources */,
 				27A0C6622C7DE58D009242D7 /* With.swift in Sources */,
 				27A0C6792C7DEC3D009242D7 /* Token.swift in Sources */,
+				27A0C6C02C7E6122009242D7 /* AnyPublisher+NetworkResponse.swift in Sources */,
 				27A0C64D2C7DE1C3009242D7 /* Network+Response.swift in Sources */,
 				27A0C65B2C7DE3E0009242D7 /* APIError.swift in Sources */,
 				27A0C6852C7E22B0009242D7 /* APIErrorPlugin.swift in Sources */,
