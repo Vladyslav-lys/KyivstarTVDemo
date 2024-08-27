@@ -7,6 +7,8 @@
 
 import Foundation
 
-// TODO: - Use case protocols is going to be declared here
+protocol HasAssetsuseCases {
+    var assets: AssetsUseCases { get }
+}
 
 protocol UseCasesProvider {}

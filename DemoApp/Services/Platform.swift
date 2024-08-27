@@ -6,9 +6,24 @@
 //
 
 import UIKit
+import NetworkLayer
 
 final class Platform: UseCasesProvider {
-    // TODO: - Use cases are going to be initialized here
+    // MARK: - Public Properties
+    let assets: AssetsUseCases
+    
+    // MARK: - Private Properties
+    private let network: Network
+    private let authPlugin: AuthorizationPlugin
+    
+    // MARK: - Initialize
+    init() {
+        let token = Token(tokenString: Environment.current.bearerToken)
+        authPlugin = AuthorizationPlugin()
+        authPlugin.setToken(token)
+        network = Network(baseURL: Environment.current.baseURL, plugins: [authPlugin, APIErrorPlugin()])
+        assets = AssetsService(network: network)
+    }
     
     // MARK: - AppDelegate
     func application(_ application: UIApplication,

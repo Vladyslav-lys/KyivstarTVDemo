@@ -50,6 +50,9 @@
 		27A0C6C02C7E6122009242D7 /* AnyPublisher+NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6BF2C7E6122009242D7 /* AnyPublisher+NetworkResponse.swift */; };
 		27A0C6C62C7E644C009242D7 /* AnyPublisher+MapToAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6C52C7E644C009242D7 /* AnyPublisher+MapToAppError.swift */; };
 		27A0C6CD2C7E6671009242D7 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6CC2C7E6671009242D7 /* APIResponse.swift */; };
+		27A0C6D02C7E670D009242D7 /* AssetsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6CF2C7E670D009242D7 /* AssetsUseCases.swift */; };
+		27A0C6D22C7E6737009242D7 /* AssetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D12C7E6737009242D7 /* AssetsService.swift */; };
+		27A0C6D52C7E6A4F009242D7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D42C7E6A4F009242D7 /* Environment.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -125,6 +128,9 @@
 		27A0C6BF2C7E6122009242D7 /* AnyPublisher+NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+NetworkResponse.swift"; sourceTree = "<group>"; };
 		27A0C6C52C7E644C009242D7 /* AnyPublisher+MapToAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+MapToAppError.swift"; sourceTree = "<group>"; };
 		27A0C6CC2C7E6671009242D7 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		27A0C6CF2C7E670D009242D7 /* AssetsUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsUseCases.swift; sourceTree = "<group>"; };
+		27A0C6D12C7E6737009242D7 /* AssetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsService.swift; sourceTree = "<group>"; };
+		27A0C6D42C7E6A4F009242D7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -310,6 +316,7 @@
 		27A0C69E2C7E54F7009242D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6D32C7E6A3C009242D7 /* Generated */,
 				27A0C6C42C7E6435009242D7 /* Combine */,
 				27A0C69F2C7E5511009242D7 /* Foundation */,
 			);
@@ -386,6 +393,23 @@
 			path = Combine;
 			sourceTree = "<group>";
 		};
+		27A0C6CE2C7E6700009242D7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6CF2C7E670D009242D7 /* AssetsUseCases.swift */,
+				27A0C6D12C7E6737009242D7 /* AssetsService.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		27A0C6D32C7E6A3C009242D7 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6D42C7E6A4F009242D7 /* Environment.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +440,7 @@
 		27E18D102C7D03AF00341D44 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6CE2C7E6700009242D7 /* Assets */,
 				27E18D112C7D03BF00341D44 /* Platform.swift */,
 			);
 			path = Services;
@@ -657,17 +682,20 @@
 				27A0C6BB2C7E5C8F009242D7 /* AppError.swift in Sources */,
 				27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */,
 				27A0C6C62C7E644C009242D7 /* AnyPublisher+MapToAppError.swift in Sources */,
+				27A0C6D52C7E6A4F009242D7 /* Environment.swift in Sources */,
 				27A0C69D2C7E5398009242D7 /* DateFormatter+Extension.swift in Sources */,
 				27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */,
 				27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */,
 				AB5E7745261461B7004AA3B2 /* ViewController.swift in Sources */,
 				27E18D122C7D03BF00341D44 /* Platform.swift in Sources */,
+				27A0C6D22C7E6737009242D7 /* AssetsService.swift in Sources */,
 				27A0C6A62C7E5779009242D7 /* DateCoder.swift in Sources */,
 				27A0C6A12C7E558C009242D7 /* TimeZone+Extension.swift in Sources */,
 				27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */,
 				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
 				27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */,
 				27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */,
+				27A0C6D02C7E670D009242D7 /* AssetsUseCases.swift in Sources */,
 				AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
