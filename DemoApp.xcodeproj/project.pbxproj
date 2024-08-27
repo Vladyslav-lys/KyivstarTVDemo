@@ -11,6 +11,25 @@
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27A0C6442C7DDAFB009242D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 27A0C6432C7DDAFB009242D7 /* Alamofire */; };
+		27A0C64A2C7DDD79009242D7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6492C7DDD79009242D7 /* Network.swift */; };
+		27A0C64D2C7DE1C3009242D7 /* Network+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C64C2C7DE1C3009242D7 /* Network+Response.swift */; };
+		27A0C64F2C7DE2CA009242D7 /* Network+Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C64E2C7DE2CA009242D7 /* Network+Task.swift */; };
+		27A0C6512C7DE30E009242D7 /* Network+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6502C7DE30E009242D7 /* Network+Combine.swift */; };
+		27A0C6542C7DE359009242D7 /* RequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6532C7DE359009242D7 /* RequestConvertible.swift */; };
+		27A0C6582C7DE3B0009242D7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6572C7DE3B0009242D7 /* NetworkError.swift */; };
+		27A0C65B2C7DE3E0009242D7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C65A2C7DE3E0009242D7 /* APIError.swift */; };
+		27A0C65F2C7DE4B5009242D7 /* DecodingError+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C65E2C7DE4B5009242D7 /* DecodingError+Debug.swift */; };
+		27A0C6622C7DE58D009242D7 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6612C7DE58D009242D7 /* With.swift */; };
+		27A0C6642C7DE615009242D7 /* Network+Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6632C7DE615009242D7 /* Network+Headers.swift */; };
+		27A0C6662C7DE655009242D7 /* NetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6652C7DE655009242D7 /* NetworkPlugin.swift */; };
+		27A0C6682C7DE6AE009242D7 /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6672C7DE6AE009242D7 /* URLRequest+Encoding.swift */; };
+		27A0C66A2C7DE729009242D7 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6692C7DE729009242D7 /* AnyEncodable.swift */; };
+		27A0C66C2C7DE84F009242D7 /* APIError+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C66B2C7DE84F009242D7 /* APIError+Status.swift */; };
+		27A0C66E2C7DE8A6009242D7 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C66D2C7DE8A6009242D7 /* Cancellable.swift */; };
+		27A0C6702C7DE8CF009242D7 /* AtomicBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C66F2C7DE8CF009242D7 /* AtomicBool.swift */; };
+		27A0C6722C7DE93D009242D7 /* CachedRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6712C7DE93D009242D7 /* CachedRequestConvertible.swift */; };
+		27A0C6772C7DEB41009242D7 /* AuthorizationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6762C7DEB41009242D7 /* AuthorizationPlugin.swift */; };
+		27A0C6792C7DEC3D009242D7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6782C7DEC3D009242D7 /* Token.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -47,6 +66,25 @@
 /* Begin PBXFileReference section */
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
+		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		27A0C64C2C7DE1C3009242D7 /* Network+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Response.swift"; sourceTree = "<group>"; };
+		27A0C64E2C7DE2CA009242D7 /* Network+Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Task.swift"; sourceTree = "<group>"; };
+		27A0C6502C7DE30E009242D7 /* Network+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Combine.swift"; sourceTree = "<group>"; };
+		27A0C6532C7DE359009242D7 /* RequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConvertible.swift; sourceTree = "<group>"; };
+		27A0C6572C7DE3B0009242D7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		27A0C65A2C7DE3E0009242D7 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		27A0C65E2C7DE4B5009242D7 /* DecodingError+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodingError+Debug.swift"; sourceTree = "<group>"; };
+		27A0C6612C7DE58D009242D7 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		27A0C6632C7DE615009242D7 /* Network+Headers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Headers.swift"; sourceTree = "<group>"; };
+		27A0C6652C7DE655009242D7 /* NetworkPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlugin.swift; sourceTree = "<group>"; };
+		27A0C6672C7DE6AE009242D7 /* URLRequest+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Encoding.swift"; sourceTree = "<group>"; };
+		27A0C6692C7DE729009242D7 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		27A0C66B2C7DE84F009242D7 /* APIError+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIError+Status.swift"; sourceTree = "<group>"; };
+		27A0C66D2C7DE8A6009242D7 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		27A0C66F2C7DE8CF009242D7 /* AtomicBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicBool.swift; sourceTree = "<group>"; };
+		27A0C6712C7DE93D009242D7 /* CachedRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedRequestConvertible.swift; sourceTree = "<group>"; };
+		27A0C6762C7DEB41009242D7 /* AuthorizationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPlugin.swift; sourceTree = "<group>"; };
+		27A0C6782C7DEC3D009242D7 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -81,6 +119,7 @@
 		27A0C6362C7DCF7F009242D7 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6472C7DDCFB009242D7 /* Network */,
 				27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */,
 			);
 			path = NetworkLayer;
@@ -91,6 +130,88 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27A0C6472C7DDCFB009242D7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6732C7DEAD2009242D7 /* Plugins */,
+				27A0C6602C7DE577009242D7 /* Utils */,
+				27A0C6592C7DE3CD009242D7 /* Models */,
+				27A0C6552C7DE387009242D7 /* Internal */,
+				27A0C6522C7DE34F009242D7 /* Protocols */,
+				27A0C64B2C7DE1AA009242D7 /* Extensions */,
+				27A0C6492C7DDD79009242D7 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		27A0C64B2C7DE1AA009242D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C64C2C7DE1C3009242D7 /* Network+Response.swift */,
+				27A0C64E2C7DE2CA009242D7 /* Network+Task.swift */,
+				27A0C6502C7DE30E009242D7 /* Network+Combine.swift */,
+				27A0C65E2C7DE4B5009242D7 /* DecodingError+Debug.swift */,
+				27A0C6632C7DE615009242D7 /* Network+Headers.swift */,
+				27A0C6672C7DE6AE009242D7 /* URLRequest+Encoding.swift */,
+				27A0C66B2C7DE84F009242D7 /* APIError+Status.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		27A0C6522C7DE34F009242D7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6532C7DE359009242D7 /* RequestConvertible.swift */,
+				27A0C6652C7DE655009242D7 /* NetworkPlugin.swift */,
+				27A0C66D2C7DE8A6009242D7 /* Cancellable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		27A0C6552C7DE387009242D7 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6562C7DE39B009242D7 /* Error */,
+				27A0C6692C7DE729009242D7 /* AnyEncodable.swift */,
+				27A0C66F2C7DE8CF009242D7 /* AtomicBool.swift */,
+				27A0C6712C7DE93D009242D7 /* CachedRequestConvertible.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		27A0C6562C7DE39B009242D7 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6572C7DE3B0009242D7 /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		27A0C6592C7DE3CD009242D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C65A2C7DE3E0009242D7 /* APIError.swift */,
+				27A0C6782C7DEC3D009242D7 /* Token.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27A0C6602C7DE577009242D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6612C7DE58D009242D7 /* With.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		27A0C6732C7DEAD2009242D7 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6762C7DEB41009242D7 /* AuthorizationPlugin.swift */,
+			);
+			path = Plugins;
 			sourceTree = "<group>";
 		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
@@ -242,6 +363,7 @@
 				TargetAttributes = {
 					27A0C6342C7DCF7F009242D7 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 					AB5E773C261461B7004AA3B2 = {
 						CreatedOnToolsVersion = 12.4;
@@ -294,6 +416,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A0C66E2C7DE8A6009242D7 /* Cancellable.swift in Sources */,
+				27A0C6642C7DE615009242D7 /* Network+Headers.swift in Sources */,
+				27A0C64A2C7DDD79009242D7 /* Network.swift in Sources */,
+				27A0C64F2C7DE2CA009242D7 /* Network+Task.swift in Sources */,
+				27A0C6772C7DEB41009242D7 /* AuthorizationPlugin.swift in Sources */,
+				27A0C6702C7DE8CF009242D7 /* AtomicBool.swift in Sources */,
+				27A0C6542C7DE359009242D7 /* RequestConvertible.swift in Sources */,
+				27A0C6582C7DE3B0009242D7 /* NetworkError.swift in Sources */,
+				27A0C6512C7DE30E009242D7 /* Network+Combine.swift in Sources */,
+				27A0C6622C7DE58D009242D7 /* With.swift in Sources */,
+				27A0C6792C7DEC3D009242D7 /* Token.swift in Sources */,
+				27A0C64D2C7DE1C3009242D7 /* Network+Response.swift in Sources */,
+				27A0C65B2C7DE3E0009242D7 /* APIError.swift in Sources */,
+				27A0C6682C7DE6AE009242D7 /* URLRequest+Encoding.swift in Sources */,
+				27A0C66A2C7DE729009242D7 /* AnyEncodable.swift in Sources */,
+				27A0C66C2C7DE84F009242D7 /* APIError+Status.swift in Sources */,
+				27A0C65F2C7DE4B5009242D7 /* DecodingError+Debug.swift in Sources */,
+				27A0C6662C7DE655009242D7 /* NetworkPlugin.swift in Sources */,
+				27A0C6722C7DE93D009242D7 /* CachedRequestConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +476,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -366,6 +508,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -377,8 +520,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -533,6 +677,7 @@
 		AB5E7752261461B9004AA3B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +697,7 @@
 		AB5E7753261461B9004AA3B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
