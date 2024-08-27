@@ -138,8 +138,7 @@ final public class Network {
             completion(result)
             return
         }
-        should(retry: target, dueTo: error, plugins: plugins) { [weak self] _ in
-            guard let self else { return }
+        should(retry: target, dueTo: error, plugins: plugins) { _ in
             completion(result)
         }
     }
