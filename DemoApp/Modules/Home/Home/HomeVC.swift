@@ -12,39 +12,17 @@ extension HomeVC: Makeable {
 }
 
 final class HomeVC: BaseVC, ViewModelContainer {
-    var viewModel: HomeVM?
-    
-    let helloLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        
-        return label
+    private var navigationImageView: UIImageView = {
+        var imageView = UIImageView()
+        imageView.image = R.image.icHomeTitle()!
+        return imageView
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        
-        setupViews()
-        setupConstraints()
-    }
-
+    var viewModel: HomeVM?
     
-    private func setupViews() {
-        
-        helloLabel.text = "Welcome to KyivstarTV test app!"
-        view.addSubview(helloLabel)
-   
+    override func setupVC() {
+        super.setupVC()
+        navigationItem.titleView = navigationImageView
     }
-    
-    private func setupConstraints() {
-        
-        helloLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        helloLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30).isActive = true
-        
-    }
-
 }
 

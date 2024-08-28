@@ -38,7 +38,7 @@ class BaseVC: UIViewController {
     
     // MARK: - Public Methods
     func setupVC() {
-        // Should override in child classes
+        view.backgroundColor = .white
     }
     
     func bind() {
