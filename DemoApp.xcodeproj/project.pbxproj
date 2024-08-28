@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2715C4ED2C7F1FA100357B82 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4EC2C7F1FA100357B82 /* HomeVM.swift */; };
+		2715C4EF2C7F213400357B82 /* Publisher+AssignNoRetain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4EE2C7F213400357B82 /* Publisher+AssignNoRetain.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -99,6 +100,7 @@
 
 /* Begin PBXFileReference section */
 		2715C4EC2C7F1FA100357B82 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		2715C4EE2C7F213400357B82 /* Publisher+AssignNoRetain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+AssignNoRetain.swift"; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 			children = (
 				27A0C6C52C7E644C009242D7 /* AnyPublisher+MapToAppError.swift */,
 				27A0C6F22C7F1F05009242D7 /* Publisher+HandleEvents.swift */,
+				2715C4EE2C7F213400357B82 /* Publisher+AssignNoRetain.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				27A0C6EB2C7F1339009242D7 /* BaseVM.swift in Sources */,
 				27A0C6DF2C7F0D66009242D7 /* ModuleFactory.swift in Sources */,
 				27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */,
+				2715C4EF2C7F213400357B82 /* Publisher+AssignNoRetain.swift in Sources */,
 				27A0C6DA2C7F0C0B009242D7 /* Coordinator.swift in Sources */,
 				27A0C6E32C7F0E79009242D7 /* NSObject+AssociatedObject.swift in Sources */,
 				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
