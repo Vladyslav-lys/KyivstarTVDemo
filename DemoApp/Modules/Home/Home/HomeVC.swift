@@ -13,7 +13,7 @@ extension HomeVC: Makeable {
 
 final class HomeVC: BaseVC, ViewModelContainer {
     // MARK: - Views
-    private var navigationImageView: UIImageView = {
+    private lazy var navigationImageView: UIImageView = {
         var imageView = UIImageView()
         imageView.image = R.image.icHomeTitle()!
         return imageView
