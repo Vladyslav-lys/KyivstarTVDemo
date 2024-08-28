@@ -10,6 +10,8 @@
 		2715C4ED2C7F1FA100357B82 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4EC2C7F1FA100357B82 /* HomeVM.swift */; };
 		2715C4EF2C7F213400357B82 /* Publisher+AssignNoRetain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4EE2C7F213400357B82 /* Publisher+AssignNoRetain.swift */; };
 		2715C4F12C7F218600357B82 /* ViewModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4F02C7F218600357B82 /* ViewModelContainer.swift */; };
+		2715C4F42C7F6FFD00357B82 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4F32C7F6FFD00357B82 /* With.swift */; };
+		2715C4F62C7F705000357B82 /* OptionalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4F52C7F705000357B82 /* OptionalProtocol.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -103,6 +105,8 @@
 		2715C4EC2C7F1FA100357B82 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		2715C4EE2C7F213400357B82 /* Publisher+AssignNoRetain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+AssignNoRetain.swift"; sourceTree = "<group>"; };
 		2715C4F02C7F218600357B82 /* ViewModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContainer.swift; sourceTree = "<group>"; };
+		2715C4F32C7F6FFD00357B82 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		2715C4F52C7F705000357B82 /* OptionalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalProtocol.swift; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -326,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				27A0C69B2C7E537C009242D7 /* Formatters */,
+				2715C4F32C7F6FFD00357B82 /* With.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -519,6 +524,7 @@
 				27A0C6DB2C7F0D13009242D7 /* Makeable.swift */,
 				27A0C6E02C7F0E1D009242D7 /* UseCasesConsumer.swift */,
 				2715C4F02C7F218600357B82 /* ViewModelContainer.swift */,
+				2715C4F52C7F705000357B82 /* OptionalProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -731,6 +737,7 @@
 			files = (
 				27A0C6B02C7E58BF009242D7 /* Promotion+Response.swift in Sources */,
 				27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */,
+				2715C4F42C7F6FFD00357B82 /* With.swift in Sources */,
 				27A0C6A32C7E5643009242D7 /* Locale+Extension.swift in Sources */,
 				27A0C6DC2C7F0D13009242D7 /* Makeable.swift in Sources */,
 				27A0C6E92C7F118C009242D7 /* HomeCoordinator.swift in Sources */,
@@ -745,6 +752,7 @@
 				27A0C69D2C7E5398009242D7 /* DateFormatter+Extension.swift in Sources */,
 				27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */,
 				27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */,
+				2715C4F62C7F705000357B82 /* OptionalProtocol.swift in Sources */,
 				AB5E7745261461B7004AA3B2 /* HomeVC.swift in Sources */,
 				27E18D122C7D03BF00341D44 /* Platform.swift in Sources */,
 				27A0C6D22C7E6737009242D7 /* AssetsService.swift in Sources */,
