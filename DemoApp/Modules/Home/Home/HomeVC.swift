@@ -11,8 +11,9 @@ extension HomeVC: Makeable {
     static func make() -> HomeVC { HomeVC() }
 }
 
-final class HomeVC: UIViewController {
-
+final class HomeVC: BaseVC, ViewModelContainer {
+    var viewModel: HomeVM?
+    
     let helloLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

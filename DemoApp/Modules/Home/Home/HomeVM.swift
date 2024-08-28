@@ -8,7 +8,7 @@
 import Combine
 
 final class HomeVM: BaseVM, UseCasesConsumer {
-    typealias UseCases = HasAssetsuseCases
+    typealias UseCases = HasAssetsUseCases
     
     // MARK: - Properties
     @Published var promotionGroup: PromotionGroup?

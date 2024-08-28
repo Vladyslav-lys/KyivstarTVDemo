@@ -13,7 +13,8 @@ protocol HomeFactoryProtocol: AnyObject {
 
 final class HomeFactory: ModuleFactory, HomeFactoryProtocol {
     func makeHomeVC() -> HomeVC {
-        // TODO: Implementatino will be later
-        makeController { _ in }
+        makeController {
+            $0.viewModel = HomeVM(useCases: useCases)
+        }
     }
 }

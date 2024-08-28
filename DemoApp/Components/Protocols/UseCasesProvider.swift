@@ -7,8 +7,10 @@
 
 import Foundation
 
-protocol HasAssetsuseCases {
+protocol HasAssetsUseCases {
     var assets: AssetsUseCases { get }
 }
 
-protocol UseCasesProvider {}
+typealias UseCases = HasAssetsUseCases
+
+protocol UseCasesProvider: UseCases {}
