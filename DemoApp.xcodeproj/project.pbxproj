@@ -12,6 +12,7 @@
 		2715C4F12C7F218600357B82 /* ViewModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4F02C7F218600357B82 /* ViewModelContainer.swift */; };
 		2715C4F42C7F6FFD00357B82 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4F32C7F6FFD00357B82 /* With.swift */; };
 		2715C4F62C7F705000357B82 /* OptionalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4F52C7F705000357B82 /* OptionalProtocol.swift */; };
+		2715C4F92C7F732600357B82 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2715C4F82C7F732600357B82 /* RswiftLibrary */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -186,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */,
+				2715C4F92C7F732600357B82 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,10 +612,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				2715C4FB2C7F735A00357B82 /* PBXTargetDependency */,
 				27A0C63A2C7DCF7F009242D7 /* PBXTargetDependency */,
 			);
 			name = DemoApp;
 			packageProductDependencies = (
+				2715C4F82C7F732600357B82 /* RswiftLibrary */,
 			);
 			productName = DemoApp;
 			productReference = AB5E773D261461B7004AA3B2 /* DemoApp.app */;
@@ -648,6 +652,7 @@
 			mainGroup = AB5E7734261461B7004AA3B2;
 			packageReferences = (
 				27A0C6412C7DD78A009242D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2715C4F72C7F72E800357B82 /* XCRemoteSwiftPackageReference "R" */,
 			);
 			productRefGroup = AB5E773E261461B7004AA3B2 /* Products */;
 			projectDirPath = "";
@@ -779,6 +784,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2715C4FB2C7F735A00357B82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 2715C4FA2C7F735A00357B82 /* RswiftGenerateInternalResources */;
+		};
 		27A0C63A2C7DCF7F009242D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27A0C6342C7DCF7F009242D7 /* NetworkLayer */;
@@ -1075,6 +1084,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2715C4F72C7F72E800357B82 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
 		27A0C6412C7DD78A009242D7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1086,6 +1103,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2715C4F82C7F732600357B82 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2715C4F72C7F72E800357B82 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		2715C4FA2C7F735A00357B82 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2715C4F72C7F72E800357B82 /* XCRemoteSwiftPackageReference "R" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
 		27A0C6432C7DDAFB009242D7 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 27A0C6412C7DD78A009242D7 /* XCRemoteSwiftPackageReference "Alamofire" */;
