@@ -27,6 +27,6 @@ extension API {
         
         public var task: Network.Task { .requestPlain }
         
-        public var suffix: String { "/data" }
+        public var suffix: String { "data" }
     }
 }

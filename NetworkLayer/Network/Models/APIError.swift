@@ -13,7 +13,6 @@ public struct APIError: Decodable, LocalizedError {
     
     let error: String?
     let errors: [String]?
-    let message: String
     public let httpCode: Int
     
     public var status: Status {
@@ -25,7 +24,6 @@ public struct APIError: Decodable, LocalizedError {
 extension APIError {
     public init(_ response: Response, httpCode: Int) {
         error = response.error
-        message = response.message
         errors = response.errors
         self.httpCode = httpCode
     }
@@ -36,7 +34,6 @@ extension APIError {
     public struct Response: Decodable {
         let error: String?
         let errors: [String]?
-        let message: String
     }
 }
 

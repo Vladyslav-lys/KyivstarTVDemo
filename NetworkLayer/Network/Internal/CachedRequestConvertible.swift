@@ -13,6 +13,7 @@ struct CachedRequestConvertible: RequestConvertible {
     let method: Network.Method
     let task: Network.Task
     let headers: Network.Headers?
+    let suffix: String
     let authorizationStrategy: AuthorizationStrategy?
 
     init(_ target: RequestConvertible) {
@@ -21,6 +22,7 @@ struct CachedRequestConvertible: RequestConvertible {
         method = target.method
         task = target.task
         headers = target.headers
+        suffix = target.suffix
         authorizationStrategy = target.authorizationStrategy
     }
 }

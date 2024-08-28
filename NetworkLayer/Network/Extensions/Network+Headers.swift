@@ -9,7 +9,7 @@ import Foundation
 
 extension Network.Header {
     static func accept(contentTypes: [String]) -> Network.Header {
-        Network.Header(name: "Accept", value: contentTypes.joined(separator: ", "))
+        Network.Header(name: "Content-Type", value: contentTypes.joined(separator: "; "))
     }
     
     static var defaultAccept: Network.Header {

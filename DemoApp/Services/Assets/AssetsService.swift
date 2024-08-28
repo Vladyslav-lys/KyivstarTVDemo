@@ -20,9 +20,9 @@ final class AssetsService: AssetsUseCases {
     // MARK: - Use Cases
     func getPromotionGroup() -> AsyncTask<PromotionGroup> {
         network.request(API.Assets.getPromotions)
-            .decode(APIResponse<PromotionGroup.Response>.self)
+            .decode(PromotionGroup.Response.self)
             .mapToAppError()
-            .map { PromotionGroup($0.data) }
+            .map { PromotionGroup($0) }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
