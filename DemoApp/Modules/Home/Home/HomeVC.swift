@@ -7,6 +7,10 @@
 
 import UIKit
 
+extension HomeVC: Makeable {
+    static func make() -> HomeVC { HomeVC() }
+}
+
 final class HomeVC: UIViewController {
 
     let helloLabel: UILabel = {
