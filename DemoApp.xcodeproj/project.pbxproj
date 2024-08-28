@@ -51,7 +51,7 @@
 		27A0C6C62C7E644C009242D7 /* AnyPublisher+MapToAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6C52C7E644C009242D7 /* AnyPublisher+MapToAppError.swift */; };
 		27A0C6D02C7E670D009242D7 /* AssetsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6CF2C7E670D009242D7 /* AssetsUseCases.swift */; };
 		27A0C6D22C7E6737009242D7 /* AssetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D12C7E6737009242D7 /* AssetsService.swift */; };
-		27A0C6D52C7E6A4F009242D7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D42C7E6A4F009242D7 /* Environment.swift */; };
+		27A0C6D52C7E6A4F009242D7 /* Environment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D42C7E6A4F009242D7 /* Environment+Extension.swift */; };
 		27A0C6DA2C7F0C0B009242D7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D92C7F0C0B009242D7 /* Coordinator.swift */; };
 		27A0C6DC2C7F0D13009242D7 /* Makeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6DB2C7F0D13009242D7 /* Makeable.swift */; };
 		27A0C6DF2C7F0D66009242D7 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6DE2C7F0D66009242D7 /* ModuleFactory.swift */; };
@@ -138,7 +138,7 @@
 		27A0C6C52C7E644C009242D7 /* AnyPublisher+MapToAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+MapToAppError.swift"; sourceTree = "<group>"; };
 		27A0C6CF2C7E670D009242D7 /* AssetsUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsUseCases.swift; sourceTree = "<group>"; };
 		27A0C6D12C7E6737009242D7 /* AssetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsService.swift; sourceTree = "<group>"; };
-		27A0C6D42C7E6A4F009242D7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		27A0C6D42C7E6A4F009242D7 /* Environment+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Extension.swift"; sourceTree = "<group>"; };
 		27A0C6D92C7F0C0B009242D7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		27A0C6DB2C7F0D13009242D7 /* Makeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Makeable.swift; sourceTree = "<group>"; };
 		27A0C6DE2C7F0D66009242D7 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
@@ -423,7 +423,7 @@
 		27A0C6D32C7E6A3C009242D7 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				27A0C6D42C7E6A4F009242D7 /* Environment.swift */,
+				27A0C6D42C7E6A4F009242D7 /* Environment+Extension.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -726,7 +726,7 @@
 				27A0C6BB2C7E5C8F009242D7 /* AppError.swift in Sources */,
 				27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */,
 				27A0C6C62C7E644C009242D7 /* AnyPublisher+MapToAppError.swift in Sources */,
-				27A0C6D52C7E6A4F009242D7 /* Environment.swift in Sources */,
+				27A0C6D52C7E6A4F009242D7 /* Environment+Extension.swift in Sources */,
 				27A0C6E52C7F0F50009242D7 /* HomeFactory.swift in Sources */,
 				27A0C69D2C7E5398009242D7 /* DateFormatter+Extension.swift in Sources */,
 				27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */,
