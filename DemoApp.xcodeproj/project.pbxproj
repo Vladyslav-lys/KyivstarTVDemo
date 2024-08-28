@@ -53,6 +53,7 @@
 		27A0C6D22C7E6737009242D7 /* AssetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D12C7E6737009242D7 /* AssetsService.swift */; };
 		27A0C6D52C7E6A4F009242D7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D42C7E6A4F009242D7 /* Environment.swift */; };
 		27A0C6DA2C7F0C0B009242D7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D92C7F0C0B009242D7 /* Coordinator.swift */; };
+		27A0C6DC2C7F0D13009242D7 /* Makeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6DB2C7F0D13009242D7 /* Makeable.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -131,6 +132,7 @@
 		27A0C6D12C7E6737009242D7 /* AssetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsService.swift; sourceTree = "<group>"; };
 		27A0C6D42C7E6A4F009242D7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		27A0C6D92C7F0C0B009242D7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		27A0C6DB2C7F0D13009242D7 /* Makeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Makeable.swift; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 			children = (
 				27E18D152C7D056400341D44 /* UseCasesProvider.swift */,
 				27A0C6D92C7F0C0B009242D7 /* Coordinator.swift */,
+				27A0C6DB2C7F0D13009242D7 /* Makeable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				27A0C6B02C7E58BF009242D7 /* Promotion+Response.swift in Sources */,
 				27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */,
 				27A0C6A32C7E5643009242D7 /* Locale+Extension.swift in Sources */,
+				27A0C6DC2C7F0D13009242D7 /* Makeable.swift in Sources */,
 				27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */,
 				27A0C6BB2C7E5C8F009242D7 /* AppError.swift in Sources */,
 				27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */,
