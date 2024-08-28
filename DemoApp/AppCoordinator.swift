@@ -17,8 +17,13 @@ final class AppCoordinator {
     // MARK: - Initialize
     init(useCases: UseCasesProvider) {
         self.useCases = useCases
-        
-        window.rootViewController = HomeVC()
+        start()
+    }
+    
+    private func start() {
+        let presenter = UINavigationController()
+        window.rootViewController = presenter
+        HomeCoordinator(presenter: presenter, useCases: useCases).start()
         window.makeKeyAndVisible()
     }
 }
