@@ -62,6 +62,7 @@
 		27A0C6EB2C7F1339009242D7 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6EA2C7F1339009242D7 /* BaseVM.swift */; };
 		27A0C6ED2C7F17C7009242D7 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6EC2C7F17C7009242D7 /* ActivityView.swift */; };
 		27A0C6EF2C7F1831009242D7 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6EE2C7F1831009242D7 /* BaseVC.swift */; };
+		27A0C6F32C7F1F05009242D7 /* Publisher+HandleEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6F22C7F1F05009242D7 /* Publisher+HandleEvents.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -149,6 +150,7 @@
 		27A0C6EA2C7F1339009242D7 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		27A0C6EC2C7F17C7009242D7 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		27A0C6EE2C7F1831009242D7 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		27A0C6F22C7F1F05009242D7 /* Publisher+HandleEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+HandleEvents.swift"; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				27A0C6C52C7E644C009242D7 /* AnyPublisher+MapToAppError.swift */,
+				27A0C6F22C7F1F05009242D7 /* Publisher+HandleEvents.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -743,6 +746,7 @@
 				27A0C6E32C7F0E79009242D7 /* NSObject+AssociatedObject.swift in Sources */,
 				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
 				27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */,
+				27A0C6F32C7F1F05009242D7 /* Publisher+HandleEvents.swift in Sources */,
 				27A0C6ED2C7F17C7009242D7 /* ActivityView.swift in Sources */,
 				27A0C6EF2C7F1831009242D7 /* BaseVC.swift in Sources */,
 				27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */,
