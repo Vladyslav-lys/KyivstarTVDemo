@@ -18,7 +18,7 @@ final class AppCoordinator {
     init(useCases: UseCasesProvider) {
         self.useCases = useCases
         
-        window.rootViewController = ViewController()
+        window.rootViewController = HomeVC()
         window.makeKeyAndVisible()
     }
 }
