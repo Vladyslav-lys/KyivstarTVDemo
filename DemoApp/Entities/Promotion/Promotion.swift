@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Promotion: Identifiable {
+struct Promotion: Equatable, Hashable, Identifiable {
     let id: String
     let name: String
     let image: URL

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PromotionGroup: Identifiable {
+struct PromotionGroup: Equatable, Hashable, Identifiable {
     let id: String
     let name: String
     let promotions: [Promotion]

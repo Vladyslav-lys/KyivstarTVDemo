@@ -15,6 +15,8 @@
 		2715C4F92C7F732600357B82 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2715C4F82C7F732600357B82 /* RswiftLibrary */; };
 		2715C5032C7F88F900357B82 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C5022C7F88F900357B82 /* UICollectionView+Helpers.swift */; };
 		2715C50E2C7F8E0F00357B82 /* PromotionsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */; };
+		2715C5112C7F93F000357B82 /* HomeVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */; };
+		2719B3662C7F9E2600C382E3 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 2719B3652C7F9E2600C382E3 /* Nuke */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -112,6 +114,7 @@
 		2715C4F52C7F705000357B82 /* OptionalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalProtocol.swift; sourceTree = "<group>"; };
 		2715C5022C7F88F900357B82 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsCVC.swift; sourceTree = "<group>"; };
+		2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+DataSource.swift"; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719B3662C7F9E2600C382E3 /* Nuke in Frameworks */,
 				27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */,
 				2715C4F92C7F732600357B82 /* RswiftLibrary in Frameworks */,
 			);
@@ -212,6 +216,14 @@
 				2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		2715C50F2C7F93D800357B82 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		27A0C6362C7DCF7F009242D7 /* NetworkLayer */ = {
@@ -469,6 +481,7 @@
 		27A0C6D82C7F0BBF009242D7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2715C50F2C7F93D800357B82 /* Extensions */,
 				2715C50C2C7F8E0300357B82 /* Cells */,
 				AB5E7744261461B7004AA3B2 /* HomeVC.swift */,
 				2715C4EC2C7F1FA100357B82 /* HomeVM.swift */,
@@ -640,6 +653,7 @@
 			name = DemoApp;
 			packageProductDependencies = (
 				2715C4F82C7F732600357B82 /* RswiftLibrary */,
+				2719B3652C7F9E2600C382E3 /* Nuke */,
 			);
 			productName = DemoApp;
 			productReference = AB5E773D261461B7004AA3B2 /* DemoApp.app */;
@@ -792,6 +806,7 @@
 				27A0C6DF2C7F0D66009242D7 /* ModuleFactory.swift in Sources */,
 				27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */,
 				2715C4EF2C7F213400357B82 /* Publisher+AssignNoRetain.swift in Sources */,
+				2715C5112C7F93F000357B82 /* HomeVC+DataSource.swift in Sources */,
 				27A0C6DA2C7F0C0B009242D7 /* Coordinator.swift in Sources */,
 				27A0C6E32C7F0E79009242D7 /* NSObject+AssociatedObject.swift in Sources */,
 				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
@@ -1145,6 +1160,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2715C4F72C7F72E800357B82 /* XCRemoteSwiftPackageReference "R" */;
 			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		2719B3652C7F9E2600C382E3 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2715C50B2C7F8D8F00357B82 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 		27A0C6432C7DDAFB009242D7 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
