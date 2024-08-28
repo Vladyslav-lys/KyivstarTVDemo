@@ -13,6 +13,7 @@
 		2715C4F42C7F6FFD00357B82 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4F32C7F6FFD00357B82 /* With.swift */; };
 		2715C4F62C7F705000357B82 /* OptionalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C4F52C7F705000357B82 /* OptionalProtocol.swift */; };
 		2715C4F92C7F732600357B82 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2715C4F82C7F732600357B82 /* RswiftLibrary */; };
+		2715C5032C7F88F900357B82 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C5022C7F88F900357B82 /* UICollectionView+Helpers.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -108,6 +109,7 @@
 		2715C4F02C7F218600357B82 /* ViewModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContainer.swift; sourceTree = "<group>"; };
 		2715C4F32C7F6FFD00357B82 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
 		2715C4F52C7F705000357B82 /* OptionalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalProtocol.swift; sourceTree = "<group>"; };
+		2715C5022C7F88F900357B82 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -194,6 +196,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2715C5012C7F88E100357B82 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2715C5022C7F88F900357B82 /* UICollectionView+Helpers.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		27A0C6362C7DCF7F009242D7 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +358,7 @@
 		27A0C69E2C7E54F7009242D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2715C5012C7F88E100357B82 /* UIKit */,
 				27A0C6D32C7E6A3C009242D7 /* Generated */,
 				27A0C6C42C7E6435009242D7 /* Combine */,
 				27A0C69F2C7E5511009242D7 /* Foundation */,
@@ -758,6 +769,7 @@
 				27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */,
 				27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */,
 				2715C4F62C7F705000357B82 /* OptionalProtocol.swift in Sources */,
+				2715C5032C7F88F900357B82 /* UICollectionView+Helpers.swift in Sources */,
 				AB5E7745261461B7004AA3B2 /* HomeVC.swift in Sources */,
 				27E18D122C7D03BF00341D44 /* Platform.swift in Sources */,
 				27A0C6D22C7E6737009242D7 /* AssetsService.swift in Sources */,
