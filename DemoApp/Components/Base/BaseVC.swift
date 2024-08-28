@@ -44,17 +44,13 @@ class BaseVC: UIViewController {
     func bind() {
         $isLoading
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] isExecuting in
-                isExecuting ? self?.showActivity() : self?.hideActivity()
-            }
+            .sink { [weak self] in $0 ? self?.showActivity() : self?.hideActivity() }
             .store(in: &subscriptions)
         
         $error
             .receive(on: DispatchQueue.main)
             .compactMap { $0 }
-            .sink { [weak self] error in
-                self?.showErrorAlert(error)
-            }
+            .sink { [weak self] in self?.showErrorAlert($0) }
             .store(in: &subscriptions)
     }
     
