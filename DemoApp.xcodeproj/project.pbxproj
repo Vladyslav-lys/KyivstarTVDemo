@@ -407,6 +407,14 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		27A0C6D82C7F0BBF009242D7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB5E7744261461B7004AA3B2 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,7 +437,7 @@
 		27E18D0D2C7CEA3600341D44 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				AB5E7744261461B7004AA3B2 /* HomeVC.swift */,
+				27A0C6D82C7F0BBF009242D7 /* Home */,
 			);
 			path = Home;
 			sourceTree = "<group>";
