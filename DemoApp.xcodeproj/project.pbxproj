@@ -54,6 +54,9 @@
 		27A0C6D52C7E6A4F009242D7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D42C7E6A4F009242D7 /* Environment.swift */; };
 		27A0C6DA2C7F0C0B009242D7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6D92C7F0C0B009242D7 /* Coordinator.swift */; };
 		27A0C6DC2C7F0D13009242D7 /* Makeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6DB2C7F0D13009242D7 /* Makeable.swift */; };
+		27A0C6DF2C7F0D66009242D7 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6DE2C7F0D66009242D7 /* ModuleFactory.swift */; };
+		27A0C6E12C7F0E1D009242D7 /* UseCasesConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6E02C7F0E1D009242D7 /* UseCasesConsumer.swift */; };
+		27A0C6E32C7F0E79009242D7 /* NSObject+AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0C6E22C7F0E79009242D7 /* NSObject+AssociatedObject.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -133,6 +136,9 @@
 		27A0C6D42C7E6A4F009242D7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		27A0C6D92C7F0C0B009242D7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		27A0C6DB2C7F0D13009242D7 /* Makeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Makeable.swift; sourceTree = "<group>"; };
+		27A0C6DE2C7F0D66009242D7 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		27A0C6E02C7F0E1D009242D7 /* UseCasesConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesConsumer.swift; sourceTree = "<group>"; };
+		27A0C6E22C7F0E79009242D7 /* NSObject+AssociatedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+AssociatedObject.swift"; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -329,6 +335,7 @@
 			children = (
 				27A0C6A02C7E558C009242D7 /* TimeZone+Extension.swift */,
 				27A0C6A22C7E5643009242D7 /* Locale+Extension.swift */,
+				27A0C6E22C7F0E79009242D7 /* NSObject+AssociatedObject.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -419,6 +426,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		27A0C6DD2C7F0D47009242D7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C6DE2C7F0D66009242D7 /* ModuleFactory.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +473,7 @@
 		27E18D132C7D052200341D44 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				27A0C6DD2C7F0D47009242D7 /* Base */,
 				27A0C6BC2C7E5DF2009242D7 /* Common */,
 				27A0C6B92C7E5C78009242D7 /* Errors */,
 				27A0C6A42C7E573A009242D7 /* Coders */,
@@ -475,6 +491,7 @@
 				27E18D152C7D056400341D44 /* UseCasesProvider.swift */,
 				27A0C6D92C7F0C0B009242D7 /* Coordinator.swift */,
 				27A0C6DB2C7F0D13009242D7 /* Makeable.swift */,
+				27A0C6E02C7F0E1D009242D7 /* UseCasesConsumer.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -702,13 +719,16 @@
 				27A0C6D22C7E6737009242D7 /* AssetsService.swift in Sources */,
 				27A0C6A62C7E5779009242D7 /* DateCoder.swift in Sources */,
 				27A0C6A12C7E558C009242D7 /* TimeZone+Extension.swift in Sources */,
+				27A0C6DF2C7F0D66009242D7 /* ModuleFactory.swift in Sources */,
 				27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */,
 				27A0C6DA2C7F0C0B009242D7 /* Coordinator.swift in Sources */,
+				27A0C6E32C7F0E79009242D7 /* NSObject+AssociatedObject.swift in Sources */,
 				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
 				27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */,
 				27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */,
 				27A0C6D02C7E670D009242D7 /* AssetsUseCases.swift in Sources */,
 				AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */,
+				27A0C6E12C7F0E1D009242D7 /* UseCasesConsumer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
