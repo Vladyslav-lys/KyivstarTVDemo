@@ -17,6 +17,7 @@
 		2715C50E2C7F8E0F00357B82 /* PromotionsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */; };
 		2715C5112C7F93F000357B82 /* HomeVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */; };
 		2719B3662C7F9E2600C382E3 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 2719B3652C7F9E2600C382E3 /* Nuke */; };
+		2719B3692C7FA1AF00C382E3 /* HomeVC+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3682C7FA1AF00C382E3 /* HomeVC+Layout.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -115,6 +116,7 @@
 		2715C5022C7F88F900357B82 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsCVC.swift; sourceTree = "<group>"; };
 		2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+DataSource.swift"; sourceTree = "<group>"; };
+		2719B3682C7FA1AF00C382E3 /* HomeVC+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Layout.swift"; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */,
+				2719B3682C7FA1AF00C382E3 /* HomeVC+Layout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				27A0C6A12C7E558C009242D7 /* TimeZone+Extension.swift in Sources */,
 				27A0C6EB2C7F1339009242D7 /* BaseVM.swift in Sources */,
 				27A0C6DF2C7F0D66009242D7 /* ModuleFactory.swift in Sources */,
+				2719B3692C7FA1AF00C382E3 /* HomeVC+Layout.swift in Sources */,
 				27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */,
 				2715C4EF2C7F213400357B82 /* Publisher+AssignNoRetain.swift in Sources */,
 				2715C5112C7F93F000357B82 /* HomeVC+DataSource.swift in Sources */,
