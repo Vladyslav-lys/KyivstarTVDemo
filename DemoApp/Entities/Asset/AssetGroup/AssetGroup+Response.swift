@@ -11,7 +11,7 @@ extension AssetGroup {
     struct Response: Decodable {
         let id: AssetGroup.ID
         let name: String
-        let type: [ContentType]
+        let type: [String]
         let assets: [Asset.Response]
     }
 }
@@ -21,7 +21,7 @@ extension AssetGroup {
         self.init(
             id: response.id,
             name: response.name,
-            type: response.type,
+            type: response.type.map(ContentType.init).compactMap { $0 },
             assets: response.assets.map(Asset.init)
         )
     }
