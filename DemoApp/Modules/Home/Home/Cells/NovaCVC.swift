@@ -42,7 +42,7 @@ final class NovaCVC: UICollectionViewCell {
     private lazy var progressView: UIProgressView = {
         var progressView = UIProgressView()
         progressView.translatesAutoresizingMaskIntoConstraints = false
-        progressView.trackTintColor = .clear
+        progressView.trackTintColor = .black
         progressView.progressTintColor = R.color.navy()!
         return progressView
     }()
@@ -73,6 +73,7 @@ final class NovaCVC: UICollectionViewCell {
         nameLabel.text = asset.name
         lockImageView.isHidden = asset.purchased
         progressView.progress = Float(asset.progress) / 100
+        progressView.isHidden = asset.progress <= 0
         loadImage(url: asset.image)
     }
     
