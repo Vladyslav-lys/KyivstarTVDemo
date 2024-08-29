@@ -19,6 +19,10 @@
 		2719B3662C7F9E2600C382E3 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 2719B3652C7F9E2600C382E3 /* Nuke */; };
 		2719B3692C7FA1AF00C382E3 /* HomeVC+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3682C7FA1AF00C382E3 /* HomeVC+Layout.swift */; };
 		2719B3722C8061E800C382E3 /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3712C8061E800C382E3 /* PromotionView.swift */; };
+		2719B3762C80774F00C382E3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3752C80774F00C382E3 /* Category.swift */; };
+		2719B3792C80779600C382E3 /* Category+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3782C80779600C382E3 /* Category+Response.swift */; };
+		2719B37C2C8077DB00C382E3 /* CategoryGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B37B2C8077DB00C382E3 /* CategoryGroup.swift */; };
+		2719B37E2C80781900C382E3 /* CategoryGroup+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B37D2C80781900C382E3 /* CategoryGroup+Response.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -119,6 +123,10 @@
 		2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+DataSource.swift"; sourceTree = "<group>"; };
 		2719B3682C7FA1AF00C382E3 /* HomeVC+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Layout.swift"; sourceTree = "<group>"; };
 		2719B3712C8061E800C382E3 /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
+		2719B3752C80774F00C382E3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2719B3782C80779600C382E3 /* Category+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Response.swift"; sourceTree = "<group>"; };
+		2719B37B2C8077DB00C382E3 /* CategoryGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGroup.swift; sourceTree = "<group>"; };
+		2719B37D2C80781900C382E3 /* CategoryGroup+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryGroup+Response.swift"; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -238,6 +246,25 @@
 				2719B3712C8061E800C382E3 /* PromotionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2719B3742C80773800C382E3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2719B37A2C8077CB00C382E3 /* CategoryGroup */,
+				2719B3752C80774F00C382E3 /* Category.swift */,
+				2719B3782C80779600C382E3 /* Category+Response.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2719B37A2C8077CB00C382E3 /* CategoryGroup */ = {
+			isa = PBXGroup;
+			children = (
+				2719B37B2C8077DB00C382E3 /* CategoryGroup.swift */,
+				2719B37D2C80781900C382E3 /* CategoryGroup+Response.swift */,
+			);
+			path = CategoryGroup;
 			sourceTree = "<group>";
 		};
 		27A0C6362C7DCF7F009242D7 /* NetworkLayer */ = {
@@ -425,6 +452,7 @@
 		27A0C6AB2C7E5836009242D7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				2719B3742C80773800C382E3 /* Category */,
 				27A0C6AC2C7E583E009242D7 /* Promotion */,
 			);
 			path = Entities;
@@ -791,6 +819,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719B3792C80779600C382E3 /* Category+Response.swift in Sources */,
 				27A0C6B02C7E58BF009242D7 /* Promotion+Response.swift in Sources */,
 				27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */,
 				2715C4F42C7F6FFD00357B82 /* With.swift in Sources */,
@@ -807,6 +836,7 @@
 				27A0C6D52C7E6A4F009242D7 /* Environment+Extension.swift in Sources */,
 				27A0C6E52C7F0F50009242D7 /* HomeFactory.swift in Sources */,
 				27A0C69D2C7E5398009242D7 /* DateFormatter+Extension.swift in Sources */,
+				2719B37E2C80781900C382E3 /* CategoryGroup+Response.swift in Sources */,
 				27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */,
 				27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */,
 				2715C4F62C7F705000357B82 /* OptionalProtocol.swift in Sources */,
@@ -827,6 +857,7 @@
 				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
 				27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */,
 				27A0C6F32C7F1F05009242D7 /* Publisher+HandleEvents.swift in Sources */,
+				2719B37C2C8077DB00C382E3 /* CategoryGroup.swift in Sources */,
 				27A0C6ED2C7F17C7009242D7 /* ActivityView.swift in Sources */,
 				27A0C6EF2C7F1831009242D7 /* BaseVC.swift in Sources */,
 				27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */,
@@ -834,6 +865,7 @@
 				AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */,
 				27A0C6E12C7F0E1D009242D7 /* UseCasesConsumer.swift in Sources */,
 				2719B3722C8061E800C382E3 /* PromotionView.swift in Sources */,
+				2719B3762C80774F00C382E3 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
