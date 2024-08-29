@@ -65,23 +65,23 @@ final class PromotionView: UIView {
     private func setupImageView() {
         addSubview(imageView)
         
-        with(imageView) {
-            $0.topAnchor.constraint(equalTo: topAnchor, constant: .zero).isActive = true
-            $0.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero).isActive = true
-            $0.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero).isActive = true
-            $0.bottomAnchor.constraint(equalTo: bottomAnchor, constant: .zero).isActive = true
-        }
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: .zero),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: .zero)
+        ])
     }
     
     private func setupPageControl() {
         addSubview(pageControl)
         
-        with(pageControl) {
-            $0.centerXAnchor.constraint(equalTo: centerXAnchor, constant: .zero).isActive = true
-            $0.heightAnchor.constraint(equalToConstant: C.pageControlHeight).isActive = true
-            $0.widthAnchor.constraint(equalToConstant: C.pageControlWidth).isActive = true
-            $0.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -C.pageControlBottomPadding).isActive = true
-        }
+        NSLayoutConstraint.activate([
+            pageControl.centerXAnchor.constraint(equalTo: centerXAnchor, constant: .zero),
+            pageControl.heightAnchor.constraint(equalToConstant: C.pageControlHeight),
+            pageControl.widthAnchor.constraint(equalToConstant: C.pageControlWidth),
+            pageControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -C.pageControlBottomPadding)
+        ])
     }
     
     private func setupGestures() {
