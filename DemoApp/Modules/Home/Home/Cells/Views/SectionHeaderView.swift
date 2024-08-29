@@ -61,23 +61,23 @@ final class SectionHeaderView: UICollectionReusableView {
     private func setupNameLabel() {
         addSubview(titleLabel)
         
-        with(titleLabel) {
-            $0.topAnchor.constraint(equalTo: topAnchor, constant: .zero).isActive = true
-            $0.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero).isActive = true
-            $0.bottomAnchor.constraint(equalTo: bottomAnchor, constant: .zero).isActive = true
-        }
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: .zero),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
+            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: .zero)
+        ])
     }
     
     private func setupButton() {
         addSubview(deleteButton)
         
-        with(deleteButton) {
-            $0.heightAnchor.constraint(equalToConstant: 28).isActive = true
-            $0.widthAnchor.constraint(equalToConstant: 24).isActive = true
-            $0.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor).isActive = true
-            $0.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: C.titleLeadingPadding).isActive = true
-            $0.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero).isActive = true
-        }
+        NSLayoutConstraint.activate([
+            deleteButton.heightAnchor.constraint(equalToConstant: 28),
+            deleteButton.widthAnchor.constraint(equalToConstant: 24),
+            deleteButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            deleteButton.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: C.titleLeadingPadding),
+            deleteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero)
+        ])
     }
     
     // MARK: - Configure
