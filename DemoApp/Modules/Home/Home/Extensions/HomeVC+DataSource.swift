@@ -35,7 +35,7 @@ extension HomeVC {
     }
     
     func makeSnapshot(from promotionGroup: PromotionGroup, content: [Content]) -> Snapshot {
-        with(NSDiffableDataSourceSnapshot<Section, Item>()) { snapshot in
+        with(Snapshot()) { snapshot in
             if !promotionGroup.promotions.isEmpty {
                 snapshot.appendSections([.promotions])
                 snapshot.appendItems([.promotions(group: promotionGroup)])

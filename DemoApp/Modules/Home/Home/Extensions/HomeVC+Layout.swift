@@ -10,7 +10,7 @@ import UIKit
 extension HomeVC {
     // MARK: - Constants
     private enum C {
-        static let promotionSectionSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(180))
+        static let promotionSectionSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(180))
     }
     
     // MARK: - Public Methods

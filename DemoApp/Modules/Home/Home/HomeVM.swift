@@ -17,10 +17,12 @@ final class HomeVM: BaseVM, UseCasesConsumer {
     init(useCases: UseCases) {
         super.init()
         self.useCases = useCases
+        
+        getPromotions()
     }
     
     // MARK: - Actions
-    func getPromotions() {
+    private func getPromotions() {
         useCases.assets
             .getPromotionGroup()
             .assignTo(isLoading: \.isLoading, value: \.promotionGroup, error: \.error, on: self)

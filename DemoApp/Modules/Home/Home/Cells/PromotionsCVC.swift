@@ -12,14 +12,14 @@ final class PromotionsCVC: UICollectionViewCell {
     // MARK: - Constants
     private enum C {
         static let cornerRadius: CGFloat = 16
+        static let horizontalPadding: CGFloat = 24
     }
     
     // MARK: - Views
     private lazy var imageView: UIImageView = {
         var imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
-        imageView.frame = bounds
-        imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.layer.cornerRadius = C.cornerRadius
         imageView.layer.masksToBounds = true
         return imageView
@@ -29,19 +29,30 @@ final class PromotionsCVC: UICollectionViewCell {
     private var promotions: [Promotion] = []
     
     // MARK: - Life cycles
-    override func prepareForReuse() {
-        super.prepareForReuse()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupImageView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
     
     // MARK: - Setup
     private func setupImageView() {
-        addSubview(imageView)
+        contentView.addSubview(imageView)
+        
+        with(imageView) {
+            $0.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: .zero).isActive = true
+            $0.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: C.horizontalPadding).isActive = true
+            $0.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -C.horizontalPadding).isActive = true
+            $0.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: .zero).isActive = true
+        }
     }
     
     // MARK: - Configure
     func configure(group: PromotionGroup) {
-        guard !group.promotions.isEmpty, let first = promotions.first else { return }
+        guard !group.promotions.isEmpty, let first = group.promotions.first else { return }
         promotions = group.promotions
         
         ImagePipeline.shared.loadImage(with: first.image) { [weak self] in
