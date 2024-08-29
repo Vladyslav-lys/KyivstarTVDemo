@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct CategoryGroup: Equatable, Hashable {
+struct CategoryGroup {
     let categories: [Category]
 }
