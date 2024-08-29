@@ -16,22 +16,18 @@ final class PromotionsCVC: UICollectionViewCell {
     }
     
     // MARK: - Views
-    private lazy var imageView: UIImageView = {
-        var imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = C.cornerRadius
-        imageView.layer.masksToBounds = true
-        return imageView
+    private lazy var promotionView: PromotionView = {
+        var view = PromotionView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = C.cornerRadius
+        view.layer.masksToBounds = true
+        return view
     }()
-    
-    // MARK: - Properties
-    private var promotions: [Promotion] = []
     
     // MARK: - Life cycles
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupImageView()
+        setupPromotionView()
     }
     
     required init?(coder: NSCoder) {
@@ -39,10 +35,10 @@ final class PromotionsCVC: UICollectionViewCell {
     }
     
     // MARK: - Setup
-    private func setupImageView() {
-        contentView.addSubview(imageView)
+    private func setupPromotionView() {
+        contentView.addSubview(promotionView)
         
-        with(imageView) {
+        with(promotionView) {
             $0.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: .zero).isActive = true
             $0.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: C.horizontalPadding).isActive = true
             $0.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -C.horizontalPadding).isActive = true
@@ -52,12 +48,7 @@ final class PromotionsCVC: UICollectionViewCell {
     
     // MARK: - Configure
     func configure(group: PromotionGroup) {
-        guard !group.promotions.isEmpty, let first = group.promotions.first else { return }
-        promotions = group.promotions
-        
-        ImagePipeline.shared.loadImage(with: first.image) { [weak self] in
-            guard let self, case .success(let response) = $0 else { return }
-            self.imageView.image = response.image
-        }
+        guard !group.promotions.isEmpty else { return }
+        promotionView.configure(promotions: group.promotions)
     }
 }

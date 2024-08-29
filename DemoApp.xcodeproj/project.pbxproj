@@ -18,6 +18,7 @@
 		2715C5112C7F93F000357B82 /* HomeVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */; };
 		2719B3662C7F9E2600C382E3 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 2719B3652C7F9E2600C382E3 /* Nuke */; };
 		2719B3692C7FA1AF00C382E3 /* HomeVC+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3682C7FA1AF00C382E3 /* HomeVC+Layout.swift */; };
+		2719B3722C8061E800C382E3 /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3712C8061E800C382E3 /* PromotionView.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -117,6 +118,7 @@
 		2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsCVC.swift; sourceTree = "<group>"; };
 		2715C5102C7F93F000357B82 /* HomeVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+DataSource.swift"; sourceTree = "<group>"; };
 		2719B3682C7FA1AF00C382E3 /* HomeVC+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Layout.swift"; sourceTree = "<group>"; };
+		2719B3712C8061E800C382E3 /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		2715C50C2C7F8E0300357B82 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2719B3702C8061E000C382E3 /* Views */,
 				2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */,
 			);
 			path = Cells;
@@ -227,6 +230,14 @@
 				2719B3682C7FA1AF00C382E3 /* HomeVC+Layout.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2719B3702C8061E000C382E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2719B3712C8061E800C382E3 /* PromotionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		27A0C6362C7DCF7F009242D7 /* NetworkLayer */ = {
@@ -822,6 +833,7 @@
 				27A0C6D02C7E670D009242D7 /* AssetsUseCases.swift in Sources */,
 				AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */,
 				27A0C6E12C7F0E1D009242D7 /* UseCasesConsumer.swift in Sources */,
+				2719B3722C8061E800C382E3 /* PromotionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
