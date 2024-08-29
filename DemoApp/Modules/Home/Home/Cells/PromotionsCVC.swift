@@ -32,12 +32,12 @@ final class PromotionsCVC: UICollectionViewCell {
     private func setupPromotionView() {
         contentView.addSubview(promotionView)
         
-        with(promotionView) {
-            $0.topAnchor.constraint(equalTo: contentView.topAnchor, constant: .zero).isActive = true
-            $0.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: .zero).isActive = true
-            $0.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: .zero).isActive = true
-            $0.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: .zero).isActive = true
-        }
+        NSLayoutConstraint.activate([
+            promotionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: .zero),
+            promotionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: .zero),
+            promotionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: .zero),
+            promotionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: .zero)
+        ])
     }
     
     // MARK: - Configure
