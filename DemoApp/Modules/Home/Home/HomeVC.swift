@@ -21,6 +21,7 @@ final class HomeVC: BaseVC, ViewModelContainer {
     
     private lazy var collectionView: UICollectionView = {
         var collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: .init())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(PromotionsCVC.self, CategoryCVC.self, NovaCVC.self)
         collectionView.registerHeader(SectionHeaderView.self)
         return collectionView
@@ -71,14 +72,14 @@ final class HomeVC: BaseVC, ViewModelContainer {
     private func setupCollectionView() {
         view.addSubview(collectionView)
         
-        with(collectionView) {
-            $0.collectionViewLayout = makeLayout(dataSource: dataSource)
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            $0.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: .zero).isActive = true
-            $0.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .zero).isActive = true
-            $0.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: .zero).isActive = true
-            $0.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: .zero).isActive = true
-        }
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: .zero),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .zero),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: .zero),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: .zero)
+        ])
+        
+        collectionView.collectionViewLayout = makeLayout(dataSource: dataSource)
     }
 }
 
