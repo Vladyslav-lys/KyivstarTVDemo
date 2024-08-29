@@ -11,6 +11,9 @@ extension HomeVC {
     // MARK: - Constants
     private enum C {
         static let promotionSectionSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(180))
+        static let categorySectionSize = NSCollectionLayoutSize(widthDimension: .absolute(104), heightDimension: .absolute(128))
+        static let sectionInsets = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+        static let groupSpacing: CGFloat = 8
     }
     
     // MARK: - Public Methods
@@ -18,6 +21,7 @@ extension HomeVC {
         UICollectionViewCompositionalLayout(sectionProvider: { [weak self, weak dataSource] index, _ in
             switch dataSource?.snapshot().sectionIdentifiers[index] {
             case .promotions: self?.makePromotionLayoutSection()
+            case .categories: self?.makeCategoryLayoutSection()
             default: nil
             }
         })
@@ -27,5 +31,14 @@ extension HomeVC {
     private func makePromotionLayoutSection() -> NSCollectionLayoutSection {
         let item = NSCollectionLayoutItem(layoutSize: C.promotionSectionSize)
         return NSCollectionLayoutSection(group: .vertical(layoutSize: C.promotionSectionSize, subitems: [item]))
+    }
+    
+    private func makeCategoryLayoutSection() -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(layoutSize: C.categorySectionSize)
+        let section = NSCollectionLayoutSection(group: .vertical(layoutSize: C.categorySectionSize, subitems: [item]))
+        section.interGroupSpacing = C.groupSpacing
+        section.orthogonalScrollingBehavior = .groupPaging
+        section.contentInsets = NSDirectionalEdgeInsets(insets: C.sectionInsets)
+        return section
     }
 }

@@ -21,7 +21,7 @@ final class HomeVC: BaseVC, ViewModelContainer {
     
     private lazy var collectionView: UICollectionView = {
         var collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: .init())
-        collectionView.register(PromotionsCVC.self)
+        collectionView.register(PromotionsCVC.self, CategoryCVC.self)
         return collectionView
     }()
     
@@ -34,12 +34,19 @@ final class HomeVC: BaseVC, ViewModelContainer {
     // MARK: - Life cycles
     override func bind() {
         super.bind()
+        guard let viewModel else { return }
         setupViewModel()
         
-        viewModel?.$promotionGroup
-            .sink { [weak self] promotionGroup in
-                guard let self, let promotionGroup else { return }
-                let snapshot = self.makeSnapshot(from: promotionGroup, content: []) // TODO: - Other content will be later
+        viewModel.$promotionGroup
+            .combineLatest(viewModel.$categoryGroup)
+            .sink { [weak self] tuple in
+                let (promotionGroup, categoryGroup) = tuple
+                guard let self, let promotionGroup, let categoryGroup else { return }
+                let snapshot = self.makeSnapshot(
+                    from: promotionGroup,
+                    content: [
+                        (Section.categories, categoryGroup.categories.map(Item.categories))
+                    ])
                 self.dataSource.apply(snapshot)
             }
             .store(in: &subscriptions)

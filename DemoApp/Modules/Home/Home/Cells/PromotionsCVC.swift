@@ -11,7 +11,6 @@ import Nuke
 final class PromotionsCVC: UICollectionViewCell {
     // MARK: - Constants
     private enum C {
-        static let cornerRadius: CGFloat = 16
         static let horizontalPadding: CGFloat = 24
     }
     
@@ -19,7 +18,7 @@ final class PromotionsCVC: UICollectionViewCell {
     private lazy var promotionView: PromotionView = {
         var view = PromotionView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = C.cornerRadius
+        view.layer.cornerRadius = Constants.cornerRadius
         view.layer.masksToBounds = true
         return view
     }()

@@ -23,6 +23,9 @@
 		2719B3792C80779600C382E3 /* Category+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3782C80779600C382E3 /* Category+Response.swift */; };
 		2719B37C2C8077DB00C382E3 /* CategoryGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B37B2C8077DB00C382E3 /* CategoryGroup.swift */; };
 		2719B37E2C80781900C382E3 /* CategoryGroup+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B37D2C80781900C382E3 /* CategoryGroup+Response.swift */; };
+		2719B3802C807FF000C382E3 /* CategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B37F2C807FF000C382E3 /* CategoryCVC.swift */; };
+		2719B3832C80808E00C382E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3822C80808E00C382E3 /* Constants.swift */; };
+		2719B3852C808BAD00C382E3 /* NSDirectionalEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3842C808BAD00C382E3 /* NSDirectionalEdgeInsets+Init.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -127,6 +130,9 @@
 		2719B3782C80779600C382E3 /* Category+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Response.swift"; sourceTree = "<group>"; };
 		2719B37B2C8077DB00C382E3 /* CategoryGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGroup.swift; sourceTree = "<group>"; };
 		2719B37D2C80781900C382E3 /* CategoryGroup+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryGroup+Response.swift"; sourceTree = "<group>"; };
+		2719B37F2C807FF000C382E3 /* CategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVC.swift; sourceTree = "<group>"; };
+		2719B3822C80808E00C382E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2719B3842C808BAD00C382E3 /* NSDirectionalEdgeInsets+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -218,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				2715C5022C7F88F900357B82 /* UICollectionView+Helpers.swift */,
+				2719B3842C808BAD00C382E3 /* NSDirectionalEdgeInsets+Init.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 			children = (
 				2719B3702C8061E000C382E3 /* Views */,
 				2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */,
+				2719B37F2C807FF000C382E3 /* CategoryCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -489,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				27A0C6BD2C7E5DFE009242D7 /* AsyncTask.swift */,
+				2719B3822C80808E00C382E3 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -857,13 +866,16 @@
 				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
 				27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */,
 				27A0C6F32C7F1F05009242D7 /* Publisher+HandleEvents.swift in Sources */,
+				2719B3802C807FF000C382E3 /* CategoryCVC.swift in Sources */,
 				2719B37C2C8077DB00C382E3 /* CategoryGroup.swift in Sources */,
 				27A0C6ED2C7F17C7009242D7 /* ActivityView.swift in Sources */,
 				27A0C6EF2C7F1831009242D7 /* BaseVC.swift in Sources */,
+				2719B3852C808BAD00C382E3 /* NSDirectionalEdgeInsets+Init.swift in Sources */,
 				27A0C6AE2C7E584A009242D7 /* Promotion.swift in Sources */,
 				27A0C6D02C7E670D009242D7 /* AssetsUseCases.swift in Sources */,
 				AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */,
 				27A0C6E12C7F0E1D009242D7 /* UseCasesConsumer.swift in Sources */,
+				2719B3832C80808E00C382E3 /* Constants.swift in Sources */,
 				2719B3722C8061E800C382E3 /* PromotionView.swift in Sources */,
 				2719B3762C80774F00C382E3 /* Category.swift in Sources */,
 			);

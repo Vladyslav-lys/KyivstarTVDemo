@@ -12,20 +12,33 @@ final class HomeVM: BaseVM, UseCasesConsumer {
     
     // MARK: - Properties
     @Published var promotionGroup: PromotionGroup?
+    @Published var categoryGroup: CategoryGroup?
     
     // MARK: - Initialize
     init(useCases: UseCases) {
         super.init()
         self.useCases = useCases
         
-        getPromotions()
+        getData()
     }
     
     // MARK: - Actions
+    private func getData() {
+        getPromotions()
+        getCategories()
+    }
+    
     private func getPromotions() {
         useCases.assets
             .getPromotionGroup()
             .assignTo(isLoading: \.isLoading, value: \.promotionGroup, error: \.error, on: self)
+            .store(in: &subscriptions)
+    }
+    
+    private func getCategories() {
+        useCases.assets
+            .getCategories()
+            .assignTo(isLoading: \.isLoading, value: \.categoryGroup, error: \.error, on: self)
             .store(in: &subscriptions)
     }
 }
