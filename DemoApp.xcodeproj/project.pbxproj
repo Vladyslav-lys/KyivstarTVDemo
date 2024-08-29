@@ -33,6 +33,7 @@
 		2719B3952C80ABF100C382E3 /* AssetGroup+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3942C80ABF100C382E3 /* AssetGroup+Response.swift */; };
 		2719B39B2C80BB5900C382E3 /* FlattenSequence+ToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B39A2C80BB5900C382E3 /* FlattenSequence+ToArray.swift */; };
 		2719B39E2C80C12F00C382E3 /* NovaCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B39D2C80C12F00C382E3 /* NovaCVC.swift */; };
+		2719B3A22C80D5FE00C382E3 /* LivechannelCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3A12C80D5FE00C382E3 /* LivechannelCVC.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -147,6 +148,7 @@
 		2719B3942C80ABF100C382E3 /* AssetGroup+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetGroup+Response.swift"; sourceTree = "<group>"; };
 		2719B39A2C80BB5900C382E3 /* FlattenSequence+ToArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlattenSequence+ToArray.swift"; sourceTree = "<group>"; };
 		2719B39D2C80C12F00C382E3 /* NovaCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaCVC.swift; sourceTree = "<group>"; };
+		2719B3A12C80D5FE00C382E3 /* LivechannelCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivechannelCVC.swift; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */,
 				2719B37F2C807FF000C382E3 /* CategoryCVC.swift */,
 				2719B39D2C80C12F00C382E3 /* NovaCVC.swift */,
+				2719B3A12C80D5FE00C382E3 /* LivechannelCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 			files = (
 				2719B3792C80779600C382E3 /* Category+Response.swift in Sources */,
 				27A0C6B02C7E58BF009242D7 /* Promotion+Response.swift in Sources */,
+				2719B3A22C80D5FE00C382E3 /* LivechannelCVC.swift in Sources */,
 				27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */,
 				2715C4F42C7F6FFD00357B82 /* With.swift in Sources */,
 				27A0C6A32C7E5643009242D7 /* Locale+Extension.swift in Sources */,

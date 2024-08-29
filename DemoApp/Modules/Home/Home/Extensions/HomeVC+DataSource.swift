@@ -19,11 +19,13 @@ extension HomeVC {
         case promotions
         case categories
         case novas
+        case livechannels
         
         var name: String? {
             switch self {
             case .categories: "Категорії:"
             case .novas: "Новинки Київстар ТБ"
+            case .livechannels: "Дитячі телеканали"
             default: nil
             }
         }
@@ -33,6 +35,7 @@ extension HomeVC {
         case promotions(group: PromotionGroup)
         case categories(category: Category)
         case novas(asset: Asset)
+        case livecahnnels(asset: Asset)
     }
     
     // MARK: - Public Methods
@@ -49,6 +52,10 @@ extension HomeVC {
                 }
             case .novas(let asset):
                 collectionView.makeCell(NovaCVC.self, for: indexPath) {
+                    $0.configure(asset: asset)
+                }
+            case .livecahnnels(let asset):
+                collectionView.makeCell(LivechannelCVC.self, for: indexPath) {
                     $0.configure(asset: asset)
                 }
             }

@@ -13,4 +13,5 @@ enum Constants {
     static let headerTitleFont: UIFont = .systemFont(ofSize: 16, weight: .regular)
     static let headerButtonFont: UIFont = .systemFont(ofSize: 16, weight: .regular)
     static let labelImageSpacing: CGFloat = 8
+    static let imageSide: CGFloat = 104
 }

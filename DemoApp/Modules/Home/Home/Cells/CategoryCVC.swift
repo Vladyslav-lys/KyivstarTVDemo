@@ -9,11 +9,6 @@ import UIKit
 import Nuke
 
 final class CategoryCVC: UICollectionViewCell {
-    // MARK: - Constants
-    private enum C {
-        static let imageSide: CGFloat = 104
-    }
-    
     // MARK: - Views
     private lazy var imageView: UIImageView = {
         var imageView = UIImageView()
@@ -56,8 +51,8 @@ final class CategoryCVC: UICollectionViewCell {
         addSubview(imageView)
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: C.imageSide),
-            imageView.heightAnchor.constraint(equalToConstant: C.imageSide),
+            imageView.widthAnchor.constraint(equalToConstant: Constants.imageSide),
+            imageView.heightAnchor.constraint(equalToConstant: Constants.imageSide),
             imageView.topAnchor.constraint(equalTo: topAnchor, constant: .zero),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero)
