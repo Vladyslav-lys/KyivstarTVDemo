@@ -38,7 +38,7 @@ final class PromotionsCVC: UICollectionViewCell {
         contentView.addSubview(promotionView)
         
         with(promotionView) {
-            $0.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: .zero).isActive = true
+            $0.topAnchor.constraint(equalTo: contentView.topAnchor, constant: .zero).isActive = true
             $0.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: C.horizontalPadding).isActive = true
             $0.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -C.horizontalPadding).isActive = true
             $0.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: .zero).isActive = true
