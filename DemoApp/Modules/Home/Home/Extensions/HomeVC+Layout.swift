@@ -12,9 +12,11 @@ extension HomeVC {
     private enum C {
         static let promotionSectionSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(180))
         static let categorySectionSize = NSCollectionLayoutSize(widthDimension: .absolute(104), heightDimension: .absolute(128))
-        static let sectionInsets = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
-        static let headerInsets = UIEdgeInsets(top: -14, left: 0, bottom: -8, right: 0)
+        static let novasSectionSize = NSCollectionLayoutSize(widthDimension: .absolute(104), heightDimension: .estimated(189))
+        static let promotionSectionInsets = UIEdgeInsets(top: 0, left: 24, bottom: 14, right: 24)
+        static let sectionInsets = UIEdgeInsets(top: 8, left: 24, bottom: 32, right: 24)
         static let groupSpacing: CGFloat = 8
+        static let headerheight: CGFloat = 24
     }
     
     // MARK: - Public Methods
@@ -23,6 +25,7 @@ extension HomeVC {
             switch dataSource?.snapshot().sectionIdentifiers[index] {
             case .promotions: self?.makePromotionLayoutSection()
             case .categories: self?.makeCategoryLayoutSection()
+            case .novas: self?.makeNovasLayoutSection()
             default: nil
             }
         })
@@ -31,12 +34,22 @@ extension HomeVC {
     // MARK: - Private Methods
     private func makePromotionLayoutSection() -> NSCollectionLayoutSection {
         let item = NSCollectionLayoutItem(layoutSize: C.promotionSectionSize)
-        return NSCollectionLayoutSection(group: .vertical(layoutSize: C.promotionSectionSize, subitems: [item]))
+        let section = NSCollectionLayoutSection(group: .vertical(layoutSize: C.promotionSectionSize, subitems: [item]))
+        section.contentInsets = NSDirectionalEdgeInsets(insets: C.promotionSectionInsets)
+        return section
     }
     
     private func makeCategoryLayoutSection() -> NSCollectionLayoutSection {
-        let item = NSCollectionLayoutItem(layoutSize: C.categorySectionSize)
-        let section = NSCollectionLayoutSection(group: .vertical(layoutSize: C.categorySectionSize, subitems: [item]))
+        makeSection(withSize: C.categorySectionSize)
+    }
+    
+    private func makeNovasLayoutSection() -> NSCollectionLayoutSection {
+        makeSection(withSize: C.novasSectionSize)
+    }
+    
+    private func makeSection(withSize size: NSCollectionLayoutSize) -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(layoutSize: size)
+        let section = NSCollectionLayoutSection(group: .vertical(layoutSize: size, subitems: [item]))
         section.interGroupSpacing = C.groupSpacing
         section.orthogonalScrollingBehavior = .groupPaging
         section.contentInsets = NSDirectionalEdgeInsets(insets: C.sectionInsets)
@@ -45,14 +58,13 @@ extension HomeVC {
     }
     
     private func makeHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(24))
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(C.headerheight))
         
         let item = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: headerSize,
             elementKind: UICollectionView.elementKindSectionHeader,
             alignment: .top
         )
-        item.contentInsets = NSDirectionalEdgeInsets(insets: C.headerInsets)
         return item
     }
 }

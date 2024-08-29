@@ -9,11 +9,6 @@ import UIKit
 import Nuke
 
 final class PromotionsCVC: UICollectionViewCell {
-    // MARK: - Constants
-    private enum C {
-        static let horizontalPadding: CGFloat = 24
-    }
-    
     // MARK: - Views
     private lazy var promotionView: PromotionView = {
         var view = PromotionView()
@@ -39,8 +34,8 @@ final class PromotionsCVC: UICollectionViewCell {
         
         with(promotionView) {
             $0.topAnchor.constraint(equalTo: contentView.topAnchor, constant: .zero).isActive = true
-            $0.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: C.horizontalPadding).isActive = true
-            $0.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -C.horizontalPadding).isActive = true
+            $0.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: .zero).isActive = true
+            $0.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: .zero).isActive = true
             $0.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: .zero).isActive = true
         }
     }

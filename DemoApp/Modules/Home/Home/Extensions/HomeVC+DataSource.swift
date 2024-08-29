@@ -18,10 +18,12 @@ extension HomeVC {
     enum Section: Int {
         case promotions
         case categories
+        case novas
         
         var name: String? {
             switch self {
             case .categories: "Категорії:"
+            case .novas: "Новинки Київстар ТБ"
             default: nil
             }
         }
@@ -30,6 +32,7 @@ extension HomeVC {
     enum Item: Equatable, Hashable {
         case promotions(group: PromotionGroup)
         case categories(category: Category)
+        case novas(asset: Asset)
     }
     
     // MARK: - Public Methods
@@ -43,6 +46,10 @@ extension HomeVC {
             case .categories(let category):
                 collectionView.makeCell(CategoryCVC.self, for: indexPath) {
                     $0.configure(category: category)
+                }
+            case .novas(let asset):
+                collectionView.makeCell(NovaCVC.self, for: indexPath) {
+                    $0.configure(asset: asset)
                 }
             }
         }

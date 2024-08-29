@@ -21,7 +21,7 @@ final class HomeVC: BaseVC, ViewModelContainer {
     
     private lazy var collectionView: UICollectionView = {
         var collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: .init())
-        collectionView.register(PromotionsCVC.self, CategoryCVC.self)
+        collectionView.register(PromotionsCVC.self, CategoryCVC.self, NovaCVC.self)
         collectionView.registerHeader(SectionHeaderView.self)
         return collectionView
     }()
@@ -39,14 +39,18 @@ final class HomeVC: BaseVC, ViewModelContainer {
         setupViewModel()
         
         viewModel.$promotionGroup
-            .combineLatest(viewModel.$categoryGroup)
+            .combineLatest(
+                viewModel.$categoryGroup,
+                viewModel.$assetGroups
+            )
             .sink { [weak self] tuple in
-                let (promotionGroup, categoryGroup) = tuple
-                guard let self, let promotionGroup, let categoryGroup else { return }
+                let (promotionGroup, categoryGroup, assetGroups) = tuple
+                guard let self, let promotionGroup, let categoryGroup, let assetGroups else { return }
                 let snapshot = self.makeSnapshot(
                     from: promotionGroup,
                     content: [
-                        (Section.categories, categoryGroup.categories.map(Item.categories))
+                        (Section.categories, categoryGroup.categories.map(Item.categories)),
+                        (Section.novas, assetGroups.moviesOrSeries.map(Item.novas))
                     ])
                 self.dataSource.apply(snapshot)
             }

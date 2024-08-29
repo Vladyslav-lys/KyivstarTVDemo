@@ -32,6 +32,7 @@
 		2719B3932C80AAA800C382E3 /* AssetGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3922C80AAA800C382E3 /* AssetGroup.swift */; };
 		2719B3952C80ABF100C382E3 /* AssetGroup+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3942C80ABF100C382E3 /* AssetGroup+Response.swift */; };
 		2719B39B2C80BB5900C382E3 /* FlattenSequence+ToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B39A2C80BB5900C382E3 /* FlattenSequence+ToArray.swift */; };
+		2719B39E2C80C12F00C382E3 /* NovaCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B39D2C80C12F00C382E3 /* NovaCVC.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -145,6 +146,7 @@
 		2719B3922C80AAA800C382E3 /* AssetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetGroup.swift; sourceTree = "<group>"; };
 		2719B3942C80ABF100C382E3 /* AssetGroup+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetGroup+Response.swift"; sourceTree = "<group>"; };
 		2719B39A2C80BB5900C382E3 /* FlattenSequence+ToArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlattenSequence+ToArray.swift"; sourceTree = "<group>"; };
+		2719B39D2C80C12F00C382E3 /* NovaCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaCVC.swift; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				2719B3702C8061E000C382E3 /* Views */,
 				2715C50D2C7F8E0F00357B82 /* PromotionsCVC.swift */,
 				2719B37F2C807FF000C382E3 /* CategoryCVC.swift */,
+				2719B39D2C80C12F00C382E3 /* NovaCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				27A0C6D52C7E6A4F009242D7 /* Environment+Extension.swift in Sources */,
 				27A0C6E52C7F0F50009242D7 /* HomeFactory.swift in Sources */,
 				27A0C69D2C7E5398009242D7 /* DateFormatter+Extension.swift in Sources */,
+				2719B39E2C80C12F00C382E3 /* NovaCVC.swift in Sources */,
 				2719B37E2C80781900C382E3 /* CategoryGroup+Response.swift in Sources */,
 				27A0C6BE2C7E5DFE009242D7 /* AsyncTask.swift in Sources */,
 				2719B39B2C80BB5900C382E3 /* FlattenSequence+ToArray.swift in Sources */,
