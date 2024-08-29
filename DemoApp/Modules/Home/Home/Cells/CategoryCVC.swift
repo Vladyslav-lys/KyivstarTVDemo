@@ -25,7 +25,7 @@ final class CategoryCVC: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.textAlignment = .center
-        label.numberOfLines = .zero
+        label.numberOfLines = 1
         return label
     }()
     

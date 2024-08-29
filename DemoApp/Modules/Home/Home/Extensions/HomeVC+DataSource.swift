@@ -20,12 +20,14 @@ extension HomeVC {
         case categories
         case novas
         case livechannels
+        case epgs
         
         var name: String? {
             switch self {
             case .categories: "Категорії:"
             case .novas: "Новинки Київстар ТБ"
             case .livechannels: "Дитячі телеканали"
+            case .epgs: "Пізнавальні"
             default: nil
             }
         }
@@ -36,6 +38,7 @@ extension HomeVC {
         case categories(category: Category)
         case novas(asset: Asset)
         case livecahnnels(asset: Asset)
+        case epgs(asset: Asset)
     }
     
     // MARK: - Public Methods
@@ -56,6 +59,10 @@ extension HomeVC {
                 }
             case .livecahnnels(let asset):
                 collectionView.makeCell(LivechannelCVC.self, for: indexPath) {
+                    $0.configure(asset: asset)
+                }
+            case .epgs(let asset):
+                collectionView.makeCell(EpgCVC.self, for: indexPath) {
                     $0.configure(asset: asset)
                 }
             }

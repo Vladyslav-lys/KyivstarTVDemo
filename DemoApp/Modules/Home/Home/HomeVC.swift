@@ -22,7 +22,7 @@ final class HomeVC: BaseVC, ViewModelContainer {
     private lazy var collectionView: UICollectionView = {
         var collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: .init())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(PromotionsCVC.self, CategoryCVC.self, NovaCVC.self, LivechannelCVC.self)
+        collectionView.register(PromotionsCVC.self, CategoryCVC.self, NovaCVC.self, LivechannelCVC.self, EpgCVC.self)
         collectionView.registerHeader(SectionHeaderView.self)
         return collectionView
     }()
@@ -52,7 +52,8 @@ final class HomeVC: BaseVC, ViewModelContainer {
                     content: [
                         (Section.categories, categoryGroup.categories.map(Item.categories)),
                         (Section.novas, assetGroups.moviesOrSeries.map(Item.novas)),
-                        (Section.livechannels, assetGroups.livechannels.map(Item.livecahnnels))
+                        (Section.livechannels, assetGroups.livechannels.map(Item.livecahnnels)),
+                        (Section.epgs, assetGroups.epgs.map(Item.epgs))
                     ])
                 self.dataSource.apply(snapshot)
             }

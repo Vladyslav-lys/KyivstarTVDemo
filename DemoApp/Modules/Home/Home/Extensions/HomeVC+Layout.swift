@@ -14,6 +14,7 @@ extension HomeVC {
         static let categorySectionSize = NSCollectionLayoutSize(widthDimension: .absolute(104), heightDimension: .absolute(128))
         static let novasSectionSize = NSCollectionLayoutSize(widthDimension: .absolute(104), heightDimension: .estimated(189))
         static let livechannelsSectionSize = NSCollectionLayoutSize(widthDimension: .absolute(104), heightDimension: .absolute(104))
+        static let epgsSectionSize = NSCollectionLayoutSize(widthDimension: .absolute(216), heightDimension: .absolute(168))
         static let promotionSectionInsets = UIEdgeInsets(top: 0, left: 24, bottom: 14, right: 24)
         static let sectionInsets = UIEdgeInsets(top: 8, left: 24, bottom: 32, right: 24)
         static let groupSpacing: CGFloat = 8
@@ -28,6 +29,7 @@ extension HomeVC {
             case .categories: self?.makeCategoryLayoutSection()
             case .novas: self?.makeNovasLayoutSection()
             case .livechannels: self?.makeLivechannelsLayoutSection()
+            case .epgs: self?.makeEpgsLayoutSection()
             default: nil
             }
         })
@@ -51,6 +53,10 @@ extension HomeVC {
     
     private func makeLivechannelsLayoutSection() -> NSCollectionLayoutSection {
         makeSection(withSize: C.livechannelsSectionSize)
+    }
+    
+    private func makeEpgsLayoutSection() -> NSCollectionLayoutSection {
+        makeSection(withSize: C.epgsSectionSize)
     }
     
     private func makeSection(withSize size: NSCollectionLayoutSize) -> NSCollectionLayoutSection {
