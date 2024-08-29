@@ -22,6 +22,7 @@ final class HomeVC: BaseVC, ViewModelContainer {
     private lazy var collectionView: UICollectionView = {
         var collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: .init())
         collectionView.register(PromotionsCVC.self, CategoryCVC.self)
+        collectionView.registerHeader(SectionHeaderView.self)
         return collectionView
     }()
     

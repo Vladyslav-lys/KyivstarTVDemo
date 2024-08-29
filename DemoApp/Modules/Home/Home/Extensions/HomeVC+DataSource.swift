@@ -20,7 +20,7 @@ extension HomeVC {
         
         var name: String? {
             switch self {
-            case .categories: "Категорії"
+            case .categories: "Категорії:"
             default: nil
             }
         }
@@ -31,9 +31,9 @@ extension HomeVC {
         case categories(category: Category)
     }
     
-    // MARK: - Methods
+    // MARK: - Public Methods
     func makeDataSource(collectionView: UICollectionView) -> DataSource {
-        DataSource(collectionView: collectionView) { collectionView, indexPath, config in
+        let dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, config in
             switch config {
             case .promotions(let group):
                 collectionView.makeCell(PromotionsCVC.self, for: indexPath) {
@@ -45,6 +45,10 @@ extension HomeVC {
                 }
             }
         }
+        
+        dataSource.supplementaryViewProvider = makeSupplementaryViewProvider()
+        
+        return dataSource
     }
     
     func makeSnapshot(from promotionGroup: PromotionGroup, content: [Content]) -> Snapshot {
@@ -57,6 +61,17 @@ extension HomeVC {
             content.forEach {
                 snapshot.appendSections([$0.section])
                 snapshot.appendItems($0.items, toSection: $0.section)
+            }
+        }
+    }
+    
+    // MARK: - Private Methods
+    private func makeSupplementaryViewProvider() -> DataSource.SupplementaryViewProvider {
+        { collectionView, kind, indexPath in
+            guard kind == UICollectionView.elementKindSectionHeader, let section = Section(rawValue: indexPath.section) else { return nil }
+
+            return collectionView.makeHeader(SectionHeaderView.self, for: indexPath) {
+                $0.configure(section: section)
             }
         }
     }
