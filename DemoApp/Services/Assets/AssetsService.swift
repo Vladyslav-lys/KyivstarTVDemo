@@ -35,4 +35,13 @@ final class AssetsService: AssetsUseCases {
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
+    
+    func getContentGroups() -> AsyncTask<[AssetGroup]> {
+        network.request(API.Assets.getContentGroups)
+            .decode([AssetGroup.Response].self)
+            .mapToAppError()
+            .map { $0.map(AssetGroup.init) }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
 }

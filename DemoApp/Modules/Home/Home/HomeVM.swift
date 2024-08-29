@@ -13,6 +13,7 @@ final class HomeVM: BaseVM, UseCasesConsumer {
     // MARK: - Properties
     @Published var promotionGroup: PromotionGroup?
     @Published var categoryGroup: CategoryGroup?
+    @Published var assetGroups: [AssetGroup]?
     
     // MARK: - Initialize
     init(useCases: UseCases) {
@@ -26,6 +27,7 @@ final class HomeVM: BaseVM, UseCasesConsumer {
     private func getData() {
         getPromotions()
         getCategories()
+        getContentGroups()
     }
     
     private func getPromotions() {
@@ -39,6 +41,13 @@ final class HomeVM: BaseVM, UseCasesConsumer {
         useCases.assets
             .getCategories()
             .assignTo(isLoading: \.isLoading, value: \.categoryGroup, error: \.error, on: self)
+            .store(in: &subscriptions)
+    }
+    
+    private func getContentGroups() {
+        useCases.assets
+            .getContentGroups()
+            .assignTo(isLoading: \.isLoading, value: \.assetGroups, error: \.error, on: self)
             .store(in: &subscriptions)
     }
 }
