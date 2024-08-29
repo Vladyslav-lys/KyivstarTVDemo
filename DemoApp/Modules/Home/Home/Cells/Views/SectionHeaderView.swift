@@ -15,6 +15,7 @@ final class SectionHeaderView: UICollectionReusableView {
     // MARK: - Constants
     private enum C {
         static let titleLeadingPadding: CGFloat = 24
+        static let deleteTitle = "Del"
     }
     
     // MARK: - Views
@@ -32,7 +33,7 @@ final class SectionHeaderView: UICollectionReusableView {
     private lazy var deleteButton: UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Del", for: .normal)
+        button.setTitle(C.deleteTitle, for: .normal)
         button.setTitleColor(R.color.navy()!, for: .normal)
         button.titleLabel?.font = Constants.headerButtonFont
         button.setContentHuggingPriority(.defaultLow, for: .horizontal)
