@@ -30,7 +30,7 @@ final class HomeVC: BaseVC, ViewModelContainer {
     var viewModel: HomeVM?
     
     // MARK: - Private Properties
-    private lazy var dataSource = makeDataSource(collectionView: collectionView)
+    private lazy var dataSource = makeDataSource(collectionView: collectionView, delegate: self)
     
     // MARK: - Life cycles
     override func bind() {
@@ -78,3 +78,11 @@ final class HomeVC: BaseVC, ViewModelContainer {
     }
 }
 
+// MARK: - SectionHeaderViewDelegate
+extension HomeVC: SectionHeaderViewDelegate {
+    func sectionHeaderViewDidDelete(_ view: SectionHeaderView, section: Section) {
+        var snapshot = dataSource.snapshot()
+        snapshot.deleteSections([section])
+        dataSource.apply(snapshot)
+    }
+}

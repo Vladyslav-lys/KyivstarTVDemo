@@ -12,6 +12,7 @@ extension HomeVC {
     typealias Content = (section: Section, items: [Item])
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
+    typealias Delegate = SectionHeaderViewDelegate
     
     // MARK: - Enums
     enum Section: Int {
@@ -32,7 +33,7 @@ extension HomeVC {
     }
     
     // MARK: - Public Methods
-    func makeDataSource(collectionView: UICollectionView) -> DataSource {
+    func makeDataSource(collectionView: UICollectionView, delegate: Delegate) -> DataSource {
         let dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, config in
             switch config {
             case .promotions(let group):
@@ -46,7 +47,7 @@ extension HomeVC {
             }
         }
         
-        dataSource.supplementaryViewProvider = makeSupplementaryViewProvider()
+        dataSource.supplementaryViewProvider = makeSupplementaryViewProvider(delegate: delegate)
         
         return dataSource
     }
@@ -66,11 +67,12 @@ extension HomeVC {
     }
     
     // MARK: - Private Methods
-    private func makeSupplementaryViewProvider() -> DataSource.SupplementaryViewProvider {
-        { collectionView, kind, indexPath in
+    private func makeSupplementaryViewProvider(delegate: Delegate) -> DataSource.SupplementaryViewProvider {
+        { [weak delegate] collectionView, kind, indexPath in
             guard kind == UICollectionView.elementKindSectionHeader, let section = Section(rawValue: indexPath.section) else { return nil }
 
             return collectionView.makeHeader(SectionHeaderView.self, for: indexPath) {
+                $0.delegate = delegate
                 $0.configure(section: section)
             }
         }

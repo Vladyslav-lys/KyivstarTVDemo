@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SectionHeaderViewDelegate: AnyObject {
+    func sectionHeaderViewDidDelete(_ view: SectionHeaderView, section: HomeVC.Section)
+}
+
 final class SectionHeaderView: UICollectionReusableView {
     // MARK: - Constants
     private enum C {
@@ -32,11 +36,15 @@ final class SectionHeaderView: UICollectionReusableView {
         button.setTitleColor(R.color.navy()!, for: .normal)
         button.titleLabel?.font = Constants.headerButtonFont
         button.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        button.addTarget(self, action: #selector(didTapDelete), for: .touchUpInside)
         return button
     }()
     
     // MARK: - Private Properties
     private var section: HomeVC.Section?
+    
+    // MARK: - Public Properties
+    weak var delegate: SectionHeaderViewDelegate?
     
     // MARK: - Initialize
     override init(frame: CGRect) {
@@ -76,5 +84,11 @@ final class SectionHeaderView: UICollectionReusableView {
     func configure(section: HomeVC.Section) {
         self.section = section
         titleLabel.text = section.name
+    }
+    
+    // MARK: - Actions
+    @objc private func didTapDelete(_ sender: Any) {
+        guard let section else { return }
+        delegate?.sectionHeaderViewDidDelete(self, section: section)
     }
 }
