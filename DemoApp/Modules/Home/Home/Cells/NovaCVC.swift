@@ -15,10 +15,12 @@ final class NovaCVC: UICollectionViewCell {
         static let imageWidth: CGFloat = 104
         static let cornerRadius: CGFloat = 12
         static let progressHeight: CGFloat = 4
+        static let lockImageSide: CGFloat = 24
+        static let lockImageSpacing: CGFloat = 8
     }
     
     // MARK: - Views
-    private lazy var imageView: UIImageView = {
+    private lazy var assetImageView: UIImageView = {
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
@@ -45,10 +47,19 @@ final class NovaCVC: UICollectionViewCell {
         return progressView
     }()
     
+    private lazy var lockImageView: UIImageView = {
+        var imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = R.image.icLock()!
+        imageView.isHidden = true
+        return imageView
+    }()
+    
     // MARK: - Life cycles
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupImageView()
+        setupAssetImageView()
+        setupLockImageView()
         setupNameLabel()
         setupProgressView()
     }
@@ -60,20 +71,21 @@ final class NovaCVC: UICollectionViewCell {
     // MARK: - Configure
     func configure(asset: Asset) {
         nameLabel.text = asset.name
+        lockImageView.isHidden = asset.purchased
         progressView.progress = Float(asset.progress) / 100
         loadImage(url: asset.image)
     }
     
     // MARK: - Setup
-    private func setupImageView() {
-        addSubview(imageView)
+    private func setupAssetImageView() {
+        addSubview(assetImageView)
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: C.imageWidth),
-            imageView.heightAnchor.constraint(equalToConstant: C.imageHeight),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: .zero),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero)
+            assetImageView.widthAnchor.constraint(equalToConstant: C.imageWidth),
+            assetImageView.heightAnchor.constraint(equalToConstant: C.imageHeight),
+            assetImageView.topAnchor.constraint(equalTo: topAnchor, constant: .zero),
+            assetImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
+            assetImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero)
         ])
     }
     
@@ -81,7 +93,7 @@ final class NovaCVC: UICollectionViewCell {
         addSubview(nameLabel)
         
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Constants.labelImageSpacing),
+            nameLabel.topAnchor.constraint(equalTo: assetImageView.bottomAnchor, constant: Constants.labelImageSpacing),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
             nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero),
             nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: .zero)
@@ -89,13 +101,24 @@ final class NovaCVC: UICollectionViewCell {
     }
     
     private func setupProgressView() {
-        imageView.addSubview(progressView)
+        assetImageView.addSubview(progressView)
         
         NSLayoutConstraint.activate([
             progressView.widthAnchor.constraint(equalToConstant: C.progressHeight),
-            progressView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: .zero),
-            progressView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: .zero),
-            progressView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: .zero)
+            progressView.leadingAnchor.constraint(equalTo: assetImageView.leadingAnchor, constant: .zero),
+            progressView.trailingAnchor.constraint(equalTo: assetImageView.trailingAnchor, constant: .zero),
+            progressView.bottomAnchor.constraint(equalTo: assetImageView.bottomAnchor, constant: .zero)
+        ])
+    }
+    
+    private func setupLockImageView() {
+        assetImageView.addSubview(lockImageView)
+        
+        NSLayoutConstraint.activate([
+            lockImageView.widthAnchor.constraint(equalToConstant: C.lockImageSide),
+            lockImageView.heightAnchor.constraint(equalToConstant: C.lockImageSide),
+            lockImageView.leadingAnchor.constraint(equalTo: assetImageView.leadingAnchor, constant: C.lockImageSpacing),
+            lockImageView.topAnchor.constraint(equalTo: assetImageView.topAnchor, constant: C.lockImageSpacing)
         ])
     }
     
@@ -103,7 +126,7 @@ final class NovaCVC: UICollectionViewCell {
     private func loadImage(url: URL) {
         ImagePipeline.shared.loadImage(with: url) { [weak self] in
             guard let self, case .success(let response) = $0 else { return }
-            self.imageView.image = response.image
+            self.assetImageView.image = response.image
         }
     }
 }
