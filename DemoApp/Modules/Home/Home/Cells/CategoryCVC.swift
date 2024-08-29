@@ -55,24 +55,24 @@ final class CategoryCVC: UICollectionViewCell {
     private func setupImageView() {
         addSubview(imageView)
         
-        with(imageView) {
-            $0.widthAnchor.constraint(equalToConstant: C.imageSide).isActive = true
-            $0.heightAnchor.constraint(equalToConstant: C.imageSide).isActive = true
-            $0.topAnchor.constraint(equalTo: topAnchor, constant: .zero).isActive = true
-            $0.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero).isActive = true
-            $0.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero).isActive = true
-        }
+        NSLayoutConstraint.activate([
+            imageView.widthAnchor.constraint(equalToConstant: C.imageSide),
+            imageView.heightAnchor.constraint(equalToConstant: C.imageSide),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: .zero),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero)
+        ])
     }
     
     private func setupNameLabel() {
         addSubview(nameLabel)
         
-        with(nameLabel) {
-            $0.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Constants.labelImageSpacing).isActive = true
-            $0.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero).isActive = true
-            $0.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero).isActive = true
-            $0.bottomAnchor.constraint(equalTo: bottomAnchor, constant: .zero).isActive = true
-        }
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Constants.labelImageSpacing),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero),
+            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: .zero)
+        ])
     }
     
     // MARK: - Private Methods
