@@ -22,7 +22,16 @@ final class AssetsService: AssetsUseCases {
         network.request(API.Assets.getPromotions)
             .decode(PromotionGroup.Response.self)
             .mapToAppError()
-            .map { PromotionGroup($0) }
+            .map(PromotionGroup.init)
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+    
+    func getCategories() -> AsyncTask<CategoryGroup> {
+        network.request(API.Assets.getCategories)
+            .decode(CategoryGroup.Response.self)
+            .mapToAppError()
+            .map(CategoryGroup.init)
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
