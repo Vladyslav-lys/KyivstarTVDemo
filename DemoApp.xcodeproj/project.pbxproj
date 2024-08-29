@@ -27,6 +27,10 @@
 		2719B3832C80808E00C382E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3822C80808E00C382E3 /* Constants.swift */; };
 		2719B3852C808BAD00C382E3 /* NSDirectionalEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3842C808BAD00C382E3 /* NSDirectionalEdgeInsets+Init.swift */; };
 		2719B3882C808D0000C382E3 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3872C808D0000C382E3 /* SectionHeaderView.swift */; };
+		2719B38C2C80A93000C382E3 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B38B2C80A93000C382E3 /* Asset.swift */; };
+		2719B38F2C80A9DC00C382E3 /* Asset+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B38E2C80A9DC00C382E3 /* Asset+Response.swift */; };
+		2719B3932C80AAA800C382E3 /* AssetGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3922C80AAA800C382E3 /* AssetGroup.swift */; };
+		2719B3952C80ABF100C382E3 /* AssetGroup+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2719B3942C80ABF100C382E3 /* AssetGroup+Response.swift */; };
 		27A0C6382C7DCF7F009242D7 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A0C63B2C7DCF7F009242D7 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; };
 		27A0C63C2C7DCF7F009242D7 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -135,6 +139,10 @@
 		2719B3822C80808E00C382E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2719B3842C808BAD00C382E3 /* NSDirectionalEdgeInsets+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		2719B3872C808D0000C382E3 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		2719B38B2C80A93000C382E3 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		2719B38E2C80A9DC00C382E3 /* Asset+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Asset+Response.swift"; sourceTree = "<group>"; };
+		2719B3922C80AAA800C382E3 /* AssetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetGroup.swift; sourceTree = "<group>"; };
+		2719B3942C80ABF100C382E3 /* AssetGroup+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetGroup+Response.swift"; sourceTree = "<group>"; };
 		27A0C6352C7DCF7F009242D7 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A0C6372C7DCF7F009242D7 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		27A0C6492C7DDD79009242D7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -276,6 +284,25 @@
 				2719B37D2C80781900C382E3 /* CategoryGroup+Response.swift */,
 			);
 			path = CategoryGroup;
+			sourceTree = "<group>";
+		};
+		2719B38A2C80A8FF00C382E3 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				2719B3902C80AA9B00C382E3 /* AssetGroup */,
+				2719B38B2C80A93000C382E3 /* Asset.swift */,
+				2719B38E2C80A9DC00C382E3 /* Asset+Response.swift */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		2719B3902C80AA9B00C382E3 /* AssetGroup */ = {
+			isa = PBXGroup;
+			children = (
+				2719B3922C80AAA800C382E3 /* AssetGroup.swift */,
+				2719B3942C80ABF100C382E3 /* AssetGroup+Response.swift */,
+			);
+			path = AssetGroup;
 			sourceTree = "<group>";
 		};
 		27A0C6362C7DCF7F009242D7 /* NetworkLayer */ = {
@@ -463,6 +490,7 @@
 		27A0C6AB2C7E5836009242D7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				2719B38A2C80A8FF00C382E3 /* Asset */,
 				2719B3742C80773800C382E3 /* Category */,
 				27A0C6AC2C7E583E009242D7 /* Promotion */,
 			);
@@ -845,6 +873,7 @@
 				27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */,
 				27A0C6C62C7E644C009242D7 /* AnyPublisher+MapToAppError.swift in Sources */,
 				2715C50E2C7F8E0F00357B82 /* PromotionsCVC.swift in Sources */,
+				2719B38C2C80A93000C382E3 /* Asset.swift in Sources */,
 				27A0C6D52C7E6A4F009242D7 /* Environment+Extension.swift in Sources */,
 				27A0C6E52C7F0F50009242D7 /* HomeFactory.swift in Sources */,
 				27A0C69D2C7E5398009242D7 /* DateFormatter+Extension.swift in Sources */,
@@ -865,10 +894,13 @@
 				27A0C6AA2C7E57EA009242D7 /* ReleaseDateCoder.swift in Sources */,
 				2715C4EF2C7F213400357B82 /* Publisher+AssignNoRetain.swift in Sources */,
 				2715C5112C7F93F000357B82 /* HomeVC+DataSource.swift in Sources */,
+				2719B38F2C80A9DC00C382E3 /* Asset+Response.swift in Sources */,
 				27A0C6DA2C7F0C0B009242D7 /* Coordinator.swift in Sources */,
 				27A0C6E32C7F0E79009242D7 /* NSObject+AssociatedObject.swift in Sources */,
 				27A0C6B32C7E5A7D009242D7 /* PromotionGroup.swift in Sources */,
 				27A0C6A82C7E57BA009242D7 /* ISODateCoder.swift in Sources */,
+				2719B3952C80ABF100C382E3 /* AssetGroup+Response.swift in Sources */,
+				2719B3932C80AAA800C382E3 /* AssetGroup.swift in Sources */,
 				27A0C6F32C7F1F05009242D7 /* Publisher+HandleEvents.swift in Sources */,
 				2719B3802C807FF000C382E3 /* CategoryCVC.swift in Sources */,
 				2719B37C2C8077DB00C382E3 /* CategoryGroup.swift in Sources */,
