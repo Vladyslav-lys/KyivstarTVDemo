@@ -77,13 +77,8 @@ extension HomeVC {
         return dataSource
     }
     
-    func makeSnapshot(from promotionGroup: PromotionGroup, content: [Content]) -> Snapshot {
+    func makeSnapshot(content: [Content]) -> Snapshot {
         with(Snapshot()) { snapshot in
-            if !promotionGroup.promotions.isEmpty {
-                snapshot.appendSections([.promotions])
-                snapshot.appendItems([.promotions(group: promotionGroup)])
-            }
-            
             content.forEach {
                 snapshot.appendSections([$0.section])
                 snapshot.appendItems($0.items, toSection: $0.section)

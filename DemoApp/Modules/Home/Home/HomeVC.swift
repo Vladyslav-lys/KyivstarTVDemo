@@ -49,8 +49,8 @@ final class HomeVC: BaseVC, ViewModelContainer {
                 let (promotionGroup, categoryGroup, assetGroups) = tuple
                 guard let self, let promotionGroup, let categoryGroup, let assetGroups else { return }
                 let snapshot = self.makeSnapshot(
-                    from: promotionGroup,
                     content: [
+                        (Section.promotions, [Item.promotions(group: promotionGroup)]),
                         (Section.categories, categoryGroup.categories.map(Item.categories)),
                         (Section.novas, assetGroups.moviesOrSeries.map(Item.novas)),
                         (Section.livechannels, assetGroups.livechannels.map(Item.livecahnnels)),
