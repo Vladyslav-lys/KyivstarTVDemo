@@ -13,13 +13,9 @@ struct AsyncImageView: View {
     
     var body: some View {
         LazyImage(url: image) { state in
-            if state.image != nil {
-                state.image?
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } else {
-                Color.blue
-            }
+            state.image?
+                .resizable()
+                .aspectRatio(contentMode: .fill)
         }
     }
 }

@@ -26,7 +26,22 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start(animated: Bool) {
-        let homwVC = factory.makeHomeVC()
+        let homwVC = factory.makeHomeVC(delegate: self)
         presenter.pushViewController(homwVC, animated: animated)
+    }
+}
+
+// MARK: - HomeVMDelegate
+extension HomeCoordinator: HomeVMDelegate {
+    func homeVMDidOpenAssetDetails(_ viewModel: HomeVM, assetDetail: AssetDetail) {
+        let assetDetailsVC = factory.makeAssetDetails(assetDetail: assetDetail, delegate: self)
+        presenter.pushViewController(assetDetailsVC, animated: true)
+    }
+}
+
+// MARK: - AssetDetailsVMDelegate
+extension HomeCoordinator: AssetDetailsVMDelegate {
+    func assetDetailsVMDidBack(_ viewModel: AssetDetailsVM) {
+        presenter.popViewController(animated: true)
     }
 }

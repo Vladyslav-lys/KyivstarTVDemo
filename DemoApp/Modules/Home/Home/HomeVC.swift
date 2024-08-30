@@ -24,6 +24,7 @@ final class HomeVC: BaseVC, ViewModelContainer {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(PromotionsCVC.self, CategoryCVC.self, NovaCVC.self, LivechannelCVC.self, EpgCVC.self)
         collectionView.registerHeader(SectionHeaderView.self)
+        collectionView.delegate = self
         return collectionView
     }()
     
@@ -91,5 +92,15 @@ extension HomeVC: SectionHeaderViewDelegate {
         var snapshot = dataSource.snapshot()
         snapshot.deleteSections([section])
         dataSource.apply(snapshot)
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension HomeVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard dataSource.snapshot().sectionIdentifiers[indexPath.section].hasAsset else {
+            return
+        }
+        viewModel?.openAssetDetails()
     }
 }

@@ -15,6 +15,7 @@ struct AssetDetailsView: View {
         static let padding24: CGFloat = 24
         static let padding16: CGFloat = 16
         static let padding12: CGFloat = 12
+        static let padding9: CGFloat = 9
         static let padding4: CGFloat = 4
         static let imageHeight: CGFloat = 211
         static let opacity30: CGFloat = 0.3
@@ -88,7 +89,7 @@ struct AssetDetailsView: View {
                 .frame(width: C.backImageWidth, height: C.backImageHeight)
         }
         .frame(width: C.backButtonSpace, height: C.backButtonSpace)
-        .padding(.leading, C.padding24)
+        .padding(.leading, C.padding9)
         .padding(.top, C.padding4)
     }
     

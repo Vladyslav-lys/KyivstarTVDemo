@@ -31,6 +31,10 @@ extension HomeVC {
             default: nil
             }
         }
+        
+        var hasAsset: Bool {
+            self == .novas || self == .livechannels || self == .epgs
+        }
     }
 
     enum Item: Equatable, Hashable {
