@@ -99,6 +99,8 @@
 		27D7C9062C8106A0006BCBCB /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7C9052C8106A0006BCBCB /* CGFloat+Extensions.swift */; };
 		27D7C90C2C810D14006BCBCB /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7C90B2C810D14006BCBCB /* View+Extensions.swift */; };
 		27D7C90F2C81ACCE006BCBCB /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7C90E2C81ACCE006BCBCB /* AsyncImageView.swift */; };
+		27D7C91A2C81B84D006BCBCB /* AssetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7C9192C81B84D006BCBCB /* AssetDetail.swift */; };
+		27D7C91D2C81B87E006BCBCB /* AssetDetail+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7C91C2C81B87E006BCBCB /* AssetDetail+Response.swift */; };
 		27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */; };
 		27E18D122C7D03BF00341D44 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D112C7D03BF00341D44 /* Platform.swift */; };
 		27E18D162C7D056400341D44 /* UseCasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18D152C7D056400341D44 /* UseCasesProvider.swift */; };
@@ -219,6 +221,8 @@
 		27D7C9052C8106A0006BCBCB /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		27D7C90B2C810D14006BCBCB /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		27D7C90E2C81ACCE006BCBCB /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		27D7C9192C81B84D006BCBCB /* AssetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetail.swift; sourceTree = "<group>"; };
+		27D7C91C2C81B87E006BCBCB /* AssetDetail+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetDetail+Response.swift"; sourceTree = "<group>"; };
 		27E18D0E2C7CFD2F00341D44 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27E18D112C7D03BF00341D44 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		27E18D152C7D056400341D44 /* UseCasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesProvider.swift; sourceTree = "<group>"; };
@@ -527,6 +531,7 @@
 		27A0C6AB2C7E5836009242D7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				27D7C9162C81B833006BCBCB /* AssetDetail */,
 				2719B38A2C80A8FF00C382E3 /* Asset */,
 				2719B3742C80773800C382E3 /* Category */,
 				27A0C6AC2C7E583E009242D7 /* Promotion */,
@@ -644,6 +649,15 @@
 				27D7C90B2C810D14006BCBCB /* View+Extensions.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		27D7C9162C81B833006BCBCB /* AssetDetail */ = {
+			isa = PBXGroup;
+			children = (
+				27D7C9192C81B84D006BCBCB /* AssetDetail.swift */,
+				27D7C91C2C81B87E006BCBCB /* AssetDetail+Response.swift */,
+			);
+			path = AssetDetail;
 			sourceTree = "<group>";
 		};
 		27E18D0B2C7CE94000341D44 /* Resources */ = {
@@ -937,6 +951,7 @@
 				2715C4F12C7F218600357B82 /* ViewModelContainer.swift in Sources */,
 				27E18D0F2C7CFD2F00341D44 /* AppCoordinator.swift in Sources */,
 				27A0C6BB2C7E5C8F009242D7 /* AppError.swift in Sources */,
+				27D7C91D2C81B87E006BCBCB /* AssetDetail+Response.swift in Sources */,
 				27A0C6832C7E1E44009242D7 /* Environment.generated.swift in Sources */,
 				27A0C6C62C7E644C009242D7 /* AnyPublisher+MapToAppError.swift in Sources */,
 				2715C50E2C7F8E0F00357B82 /* PromotionsCVC.swift in Sources */,
@@ -951,6 +966,7 @@
 				27A0C6B52C7E5B36009242D7 /* PromotionGroup+Response.swift in Sources */,
 				2719B3AD2C80DF6600C382E3 /* BaseAssetCVC.swift in Sources */,
 				2715C4F62C7F705000357B82 /* OptionalProtocol.swift in Sources */,
+				27D7C91A2C81B84D006BCBCB /* AssetDetail.swift in Sources */,
 				2715C5032C7F88F900357B82 /* UICollectionView+Helpers.swift in Sources */,
 				AB5E7745261461B7004AA3B2 /* HomeVC.swift in Sources */,
 				27E18D122C7D03BF00341D44 /* Platform.swift in Sources */,
