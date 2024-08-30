@@ -11,4 +11,5 @@ protocol AssetsUseCases {
     func getPromotionGroup() -> AsyncTask<PromotionGroup>
     func getCategories() -> AsyncTask<CategoryGroup>
     func getContentGroups() -> AsyncTask<[AssetGroup]>
+    func getAssetDetails() -> AsyncTask<AssetDetail>
 }

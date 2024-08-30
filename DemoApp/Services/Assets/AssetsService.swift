@@ -44,4 +44,13 @@ final class AssetsService: AssetsUseCases {
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
+    
+    func getAssetDetails() -> AsyncTask<AssetDetail> {
+        network.request(API.Assets.getAssetDetails)
+            .decode(AssetDetail.Response.self)
+            .mapToAppError()
+            .map(AssetDetail.init)
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
 }
